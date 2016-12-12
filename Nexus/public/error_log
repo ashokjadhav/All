@@ -1,0 +1,1 @@
+[20-Mar-2015 23:58:59 Asia/Dili] PHP Fatal error:  Using $this when not in object context in /home/nexusphpdev/public_html/public/chat.php on line 2

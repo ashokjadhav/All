@@ -1,0 +1,314 @@
+<style type='text/css'>
+        body{font-family: Verdana, sans-serif; font-size: 12px;}
+        h2 { font-family: Verdana, sans-serif; font-size: 12px; }
+        table { border-collapse: collapse; border:1px solid #ccc; width:100%;}
+        table td { border-collapse: collapse; border:1px solid #ccc; font-size: 12px; padding: 10px;}
+        .title { background-color: #eee; }
+        ul li { list-style-type:circle; padding: 5px; }
+        .even { background-color: #FFFBFF; }
+    </style><h2>Android</h2><table>
+                    <tr>
+                        <td width="20" align="center" class="title"><b>Sr.No.</b></td>
+                        <td align="center" class="title"><b>Brand</b></td>
+                        <td align="center" class="title"><b>Model No.</b></td>
+                        <td align="center" class="title"><b>OS Version</b></td>
+                        <td align="center" class="title"><b>Resolution (pixel)</b></td>
+                        <td align="center" class="title"><b>Size (inch)</b></td>
+                    </tr><tr class="">
+                    <td align="center">1</td>
+                    <td align="center">Asus</td>
+                    <td align="center">Asus Google Nexus 7</td>
+                    <td align="center">Android OS, v4.1 (Jelly Bean), upgradable to v4.4.2 (KitKat)</td>
+                    <td align="center">800 x 1280</td>
+                    <td align="center">7.0</td>
+                </tr><tr class="even">
+                    <td align="center">2</td>
+                    <td align="center">Asus</td>
+                    <td align="center">Asus Google Nexus 7</td>
+                    <td align="center">Android OS, v4.1 (Jelly Bean), upgradable to v4.4.2 (KitKat)</td>
+                    <td align="center">800 x 1280</td>
+                    <td align="center">7.0</td>
+                </tr><tr class="">
+                    <td align="center">3</td>
+                    <td align="center">Samsung</td>
+                    <td align="center">Samsung Galaxy Ace Plus S7500</td>
+                    <td align="center">Android OS, v2.3 (Gingerbread), planned upgrade to v4.1 (Jelly Bean)</td>
+                    <td align="center">320 x 480</td>
+                    <td align="center">3.5</td>
+                </tr><tr class="even">
+                    <td align="center">4</td>
+                    <td align="center">Samsung</td>
+                    <td align="center">Samsung I9300 Galaxy S III</td>
+                    <td align="center">Android OS, v4.0.4 (Ice Cream Sandwich), 4.3 (Jelly Bean)</td>
+                    <td align="center">720 x 1280</td>
+                    <td align="center">4.8</td>
+                </tr><tr class="">
+                    <td align="center">5</td>
+                    <td align="center">HTC</td>
+                    <td align="center">HTC Wildfire</td>
+                    <td align="center">Android OS, v2.1 (Eclair), upgradable to v2.2 (Froyo)</td>
+                    <td align="center">240 x 320 </td>
+                    <td align="center">3.2</td>
+                </tr><tr class="even">
+                    <td align="center">6</td>
+                    <td align="center">Asus</td>
+                    <td align="center">Asus Memo Pad ME172V</td>
+                    <td align="center">Android OS, v4.1 (Jelly Bean)</td>
+                    <td align="center">600 x 1024 </td>
+                    <td align="center">7.0</td>
+                </tr><tr class="">
+                    <td align="center">7</td>
+                    <td align="center">Micromax</td>
+                    <td align="center">Canvas A110 Canvas 2 (Black)</td>
+                    <td align="center">Android OS, v4.0.4 (Ice Cream Sandwich), upgradable to v4.1.1 (Jelly Bean)</td>
+                    <td align="center">480 x 854</td>
+                    <td align="center">5.0</td>
+                </tr><tr class="even">
+                    <td align="center">8</td>
+                    <td align="center">Micromax</td>
+                    <td align="center">Micromax Canvas Turbo</td>
+                    <td align="center">Android OS, v4.2.1 (Jelly Bean)</td>
+                    <td align="center">1080 x 1920</td>
+                    <td align="center">5.0</td>
+                </tr><tr class="">
+                    <td align="center">9</td>
+                    <td align="center">Micromax</td>
+                    <td align="center">Micromax A116 Canvas HD</td>
+                    <td align="center">Android OS, v4.1.2 (Jelly Bean), planned upgrade to v4.2,1 (Jelly Bean)</td>
+                    <td align="center">720 x 1280</td>
+                    <td align="center">5.0</td>
+                </tr><tr class="even">
+                    <td align="center">10</td>
+                    <td align="center">Motorola</td>
+                    <td align="center">Motorola Moto G</td>
+                    <td align="center">Android OS, v4.3 (Jelly Bean), upgradable to v4.4.3 (KitKat)</td>
+                    <td align="center">720 x 1280</td>
+                    <td align="center">4.5</td>
+                </tr><tr class="">
+                    <td align="center">11</td>
+                    <td align="center">Motorola</td>
+                    <td align="center">Motorola Moto X</td>
+                    <td align="center">Android OS, v4.2.2 (Jelly Bean), upgradable to v4.4.3 (KitKat)</td>
+                    <td align="center">720 x 1280</td>
+                    <td align="center">4.7</td>
+                </tr><tr class="even">
+                    <td align="center">12</td>
+                    <td align="center">Motorola</td>
+                    <td align="center">Motorola Moto G</td>
+                    <td align="center">Android OS, v4.3 (Jelly Bean), upgradable to v4.4.3 (KitKat)</td>
+                    <td align="center">720 x 1280</td>
+                    <td align="center">4.5</td>
+                </tr><tr class="">
+                    <td align="center">13</td>
+                    <td align="center">Karbon</td>
+                    <td align="center">Karbonn A90</td>
+                    <td align="center"> 	Android OS, v4.0.3 (Ice Cream Sandwich)</td>
+                    <td align="center">480x800 </td>
+                    <td align="center">4.3</td>
+                </tr><tr class="even">
+                    <td align="center">14</td>
+                    <td align="center">Karbon</td>
+                    <td align="center">Karbonn A21</td>
+                    <td align="center">v4.0.4 (Ice Cream Sandwich)</td>
+                    <td align="center">480 x 800</td>
+                    <td align="center">4.5</td>
+                </tr><tr class="">
+                    <td align="center">15</td>
+                    <td align="center">Samsung</td>
+                    <td align="center">Samsung Galaxy Note II N7100</td>
+                    <td align="center">Android OS, v4.1.1 (Jelly Bean), upgradable to v4.4.2 (KitKat)</td>
+                    <td align="center">720 x 1280</td>
+                    <td align="center"> 5.5</td>
+                </tr><tr class="even">
+                    <td align="center">16</td>
+                    <td align="center">Samsung</td>
+                    <td align="center">Samsung Galaxy Note 10.1</td>
+                    <td align="center">Android OS, v4.3 (Jelly Bean)</td>
+                    <td align="center">2560 x 1600</td>
+                    <td align="center">10.1</td>
+                </tr><tr class="">
+                    <td align="center">17</td>
+                    <td align="center">Samsung</td>
+                    <td align="center">Samsung Galaxy Tab 3 7.0 - OLD</td>
+                    <td align="center">Android OS, v2.2</td>
+                    <td align="center">600 x 1024</td>
+                    <td align="center">7.0</td>
+                </tr><tr class="even">
+                    <td align="center">18</td>
+                    <td align="center">Samsung</td>
+                    <td align="center">Samsung Galaxy Tab 3 7.0</td>
+                    <td align="center">Android OS, v4.1.2 (Jelly Bean)</td>
+                    <td align="center">600 x 1024</td>
+                    <td align="center">7.0</td>
+                </tr><tr class="">
+                    <td align="center">19</td>
+                    <td align="center">Motorola</td>
+                    <td align="center">Motorola Moto G </td>
+                    <td align="center">Android OS, v4.3 (Jelly Bean), upgradable to v4.4.3 (KitKat)</td>
+                    <td align="center">720 x 1280</td>
+                    <td align="center">4.7</td>
+                </tr></table><br style='page-break-before: always'><h2>Blackberry</h2><table>
+                    <tr>
+                        <td width="20" align="center" class="title"><b>Sr.No.</b></td>
+                        <td align="center" class="title"><b>Brand</b></td>
+                        <td align="center" class="title"><b>Model No.</b></td>
+                        <td align="center" class="title"><b>OS Version</b></td>
+                        <td align="center" class="title"><b>Resolution (pixel)</b></td>
+                        <td align="center" class="title"><b>Size (inch)</b></td>
+                    </tr><tr class="">
+                    <td align="center">1</td>
+                    <td align="center">Blackberry</td>
+                    <td align="center">BlackBerry Torch 9800</td>
+                    <td align="center">BlackBerry OS 6.0</td>
+                    <td align="center">360 x 480</td>
+                    <td align="center">3.2</td>
+                </tr><tr class="even">
+                    <td align="center">2</td>
+                    <td align="center">Blackberry</td>
+                    <td align="center">BlackBerry Curve 8520</td>
+                    <td align="center">BlackBerry OS 5.0</td>
+                    <td align="center">320 x 240</td>
+                    <td align="center">2.46</td>
+                </tr></table><br style='page-break-before: always'><h2>IOS</h2><table>
+                    <tr>
+                        <td width="20" align="center" class="title"><b>Sr.No.</b></td>
+                        <td align="center" class="title"><b>Brand</b></td>
+                        <td align="center" class="title"><b>Model No.</b></td>
+                        <td align="center" class="title"><b>OS Version</b></td>
+                        <td align="center" class="title"><b>Resolution (pixel)</b></td>
+                        <td align="center" class="title"><b>Size (inch)</b></td>
+                    </tr><tr class="">
+                    <td align="center">1</td>
+                    <td align="center">Apple</td>
+                    <td align="center">Apple iPhone 3G</td>
+                    <td align="center">iOS, upgradable to iOS 4.2.1</td>
+                    <td align="center">320 x 480</td>
+                    <td align="center">3.5</td>
+                </tr><tr class="even">
+                    <td align="center">2</td>
+                    <td align="center">Apple</td>
+                    <td align="center">Apple iPod touch 5th generation</td>
+                    <td align="center">iOS (7.x, 6.1, 6)</td>
+                    <td align="center">640 x 1136</td>
+                    <td align="center">4.00</td>
+                </tr><tr class="">
+                    <td align="center">3</td>
+                    <td align="center">Apple</td>
+                    <td align="center">Apple iPod touch 5th generation</td>
+                    <td align="center">iOS (7.x, 6.1, 6)</td>
+                    <td align="center">640 x 1136</td>
+                    <td align="center">4.00</td>
+                </tr><tr class="even">
+                    <td align="center">4</td>
+                    <td align="center">Apple</td>
+                    <td align="center">Apple iPod touch 5th generation</td>
+                    <td align="center">iOS (7.x, 6.1, 6)</td>
+                    <td align="center">640 x 1136</td>
+                    <td align="center">4.00</td>
+                </tr><tr class="">
+                    <td align="center">5</td>
+                    <td align="center">Apple</td>
+                    <td align="center">Apple iPod touch 5th generation</td>
+                    <td align="center">iOS (7.x, 6.1, 6)</td>
+                    <td align="center">640 x 1136</td>
+                    <td align="center">4.00</td>
+                </tr><tr class="even">
+                    <td align="center">6</td>
+                    <td align="center">Apple</td>
+                    <td align="center">Apple iPod touch 3rd generation</td>
+                    <td align="center">iOS (3.x)</td>
+                    <td align="center">480 x 320</td>
+                    <td align="center">3.5</td>
+                </tr><tr class="">
+                    <td align="center">7</td>
+                    <td align="center">Apple</td>
+                    <td align="center">Apple iPod touch 3rd generation</td>
+                    <td align="center"> iOS (3.x)</td>
+                    <td align="center">480 x 320</td>
+                    <td align="center">3.5</td>
+                </tr><tr class="even">
+                    <td align="center">8</td>
+                    <td align="center">Apple</td>
+                    <td align="center">Apple iPhone 4 16GB</td>
+                    <td align="center">iOS 4, upgradable to iOS 7.1.1</td>
+                    <td align="center">640 x 960 </td>
+                    <td align="center">3.5</td>
+                </tr><tr class="">
+                    <td align="center">9</td>
+                    <td align="center">Apple</td>
+                    <td align="center">Apple iPhone 3G</td>
+                    <td align="center">iOS, upgradable to iOS 4.2.1</td>
+                    <td align="center">320 x 480</td>
+                    <td align="center">3.5</td>
+                </tr><tr class="even">
+                    <td align="center">10</td>
+                    <td align="center">Apple</td>
+                    <td align="center">Apple iPod touch 3rd generation Old</td>
+                    <td align="center">iOS (3.x)</td>
+                    <td align="center">320 x 480</td>
+                    <td align="center">3.5</td>
+                </tr><tr class="">
+                    <td align="center">11</td>
+                    <td align="center">Apple</td>
+                    <td align="center">Apple iPhone 5</td>
+                    <td align="center">iOS 6, upgradable to iOS 7.1.1, planned upgrade to iOS 8</td>
+                    <td align="center">640 x 1136</td>
+                    <td align="center">4.0</td>
+                </tr><tr class="even">
+                    <td align="center">12</td>
+                    <td align="center">Apple</td>
+                    <td align="center">Apple iPad Wi-Fi + 3G</td>
+                    <td align="center">iOS 4, upgradable to iOS 5.1.1</td>
+                    <td align="center">768 x 1024</td>
+                    <td align="center">9.7</td>
+                </tr><tr class="">
+                    <td align="center">13</td>
+                    <td align="center">Apple</td>
+                    <td align="center">Apple iPad 2 Wi-Fi + 3G</td>
+                    <td align="center">iOS 4, upgradable to iOS 7.1.1, planned upgrade to iOS 8</td>
+                    <td align="center">768 x 1024</td>
+                    <td align="center">9.7</td>
+                </tr><tr class="even">
+                    <td align="center">14</td>
+                    <td align="center">Apple</td>
+                    <td align="center">Apple iPad Wi-Fi + 3G</td>
+                    <td align="center">iOS 4, upgradable to iOS 7.1.1, planned upgrade to iOS 8</td>
+                    <td align="center">768 x 1024</td>
+                    <td align="center">9.7</td>
+                </tr><tr class="">
+                    <td align="center">15</td>
+                    <td align="center">Apple</td>
+                    <td align="center">Apple iPad Air</td>
+                    <td align="center">iOS 7, upgradable to iOS 7.1.1, planned upgrade to iOS 8</td>
+                    <td align="center">1536 x 2048</td>
+                    <td align="center">9.7</td>
+                </tr></table><br style='page-break-before: always'><h2>Windows</h2><table>
+                    <tr>
+                        <td width="20" align="center" class="title"><b>Sr.No.</b></td>
+                        <td align="center" class="title"><b>Brand</b></td>
+                        <td align="center" class="title"><b>Model No.</b></td>
+                        <td align="center" class="title"><b>OS Version</b></td>
+                        <td align="center" class="title"><b>Resolution (pixel)</b></td>
+                        <td align="center" class="title"><b>Size (inch)</b></td>
+                    </tr><tr class="">
+                    <td align="center">1</td>
+                    <td align="center">Nokia</td>
+                    <td align="center">Nokia X</td>
+                    <td align="center">Android OS, v4.1.2 (Jelly Bean)</td>
+                    <td align="center">480x800</td>
+                    <td align="center">4.00</td>
+                </tr><tr class="even">
+                    <td align="center">2</td>
+                    <td align="center">Nokia</td>
+                    <td align="center">Nokia C6</td>
+                    <td align="center">Symbian OS v9.4, Series 60 rel. 5</td>
+                    <td align="center">360 x 640</td>
+                    <td align="center">3.2</td>
+                </tr><tr class="">
+                    <td align="center">3</td>
+                    <td align="center">LG</td>
+                    <td align="center">LG E900 Optimus 7</td>
+                    <td align="center">Microsoft Windows Phone 7, upgradable to v7.8</td>
+                    <td align="center">480 x 800</td>
+                    <td align="center">3.8</td>
+                </tr></table><br style='page-break-before: always'>

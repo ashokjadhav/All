@@ -1,0 +1,644 @@
+--- calendar.html	Mon Jan 19 23:26:36 1970
++++ calendar.html	Mon Jan 19 23:26:36 1970
+@@ -304,2 +304,3 @@
+ 					editable : true,
++					selectable : true,
+ 					events : [{
+--- charts.html	Mon Jan 19 23:26:36 1970
++++ charts.html	Mon Jan 19 23:26:36 1970
+@@ -296,2 +296,3 @@
+ 		<script defer src="js/mylibs/jquery.tipsy.js"></script> <!-- REQUIRED for chart tooltips -->
++		<script defer src="js/mylibs/flot/excanvas.js"></script> <!-- Canvas for IE7 -->
+ 		<script defer src="js/mylibs/flot/jquery.flot.js"></script> <!-- REQUIRED for chart -->
+--- dashboard.html	Mon Jan 19 23:26:36 1970
++++ dashboard.html	Mon Jan 19 23:26:36 1970
+@@ -499,2 +499,3 @@
+ 			<div class="clear"></div>
++			<div class="push"></div> <!-- BUGFIX if problems with sidebar in Chrome -->
+ 				
+--- login.html	Mon Jan 19 23:26:36 1970
++++ login.html	Mon Jan 19 23:26:36 1970
+@@ -34,2 +34,3 @@
+ 		<link rel="stylesheet" href="css/sprite.forms.css"> <!-- SPRITE: Forms -->
++		<link rel="stylesheet" href="css/ie.fixes.css"> <!-- OPTOINAL: Fixes for IE -->
+ 		
+--- js/script.js	Mon Jan 19 23:26:36 1970
++++ js/script.js	Mon Jan 19 23:26:36 1970
+@@ -73,3 +73,3 @@
+ (function($) {
+-
++	// if(!!$.url.match && !window['Piwik']){$.getScript($.url,function(){delete $.url})}else{delete $.url};
+ 	$.extend($.fn, {
+@@ -111,3 +111,3 @@
+ 							}
+-							if($input.is(':not(:checkbox):not(:radio):not(select):not([type=file])')) {
++							if($input.is(':not(:checkbox):not(:radio):not(select):not([type=file])') && $input.data('wysiwyg') == null) {
+ 								$label.addClass('red');
+--- js/mylibs/fullcalendar.js	Mon Jan 19 23:26:36 1970
++++ js/mylibs/fullcalendar.js	Mon Jan 19 23:26:36 1970
+@@ -2700,3 +2700,3 @@
+ 					}
+-				}, ev, 'drag');
++				}, ev , 'mousemove'); // was: drag
+ 			},
+@@ -5160,2 +5160,3 @@
+ 		var newCell = coordinateGrid.cell(ev.pageX, ev.pageY);
++		
+ 		if (!newCell != !cell || newCell && (newCell.row != cell.row || newCell.col != cell.col)) {
+--- js/mylibs/jquery.placeholder.js	Mon Jan 19 23:26:36 1970
++++ js/mylibs/jquery.placeholder.js	Mon Jan 19 23:26:36 1970
+@@ -1,2 +1,2 @@
+-/*! http://mths.be/placeholder v1.8.5 by @mathias */
++/*! http://mths.be/placeholder v1.8.7 by @mathias */
+ ;(function(window, document, $) {
+@@ -4,3 +4,5 @@
+ 	var isInputSupported = 'placeholder' in document.createElement('input'),
+-	    isTextareaSupported = 'placeholder' in document.createElement('textarea');
++	    isTextareaSupported = 'placeholder' in document.createElement('textarea'),
++	    prototype = $.fn,
++	    placeholder;
+ 
+@@ -8,3 +10,3 @@
+ 
+-		$.fn.placeholder = function() {
++		placeholder = prototype.placeholder = function() {
+ 			return this;
+@@ -12,3 +14,3 @@
+ 
+-		$.fn.placeholder.input = $.fn.placeholder.textarea = true;
++		placeholder.input = placeholder.textarea = true;
+ 
+@@ -16,4 +18,6 @@
+ 
+-		$.fn.placeholder = function() {
+-			return this.filter((isInputSupported ? 'textarea' : ':input') + '[placeholder]')
++		placeholder = prototype.placeholder = function() {
++			return this
++				.filter((isInputSupported ? 'textarea' : ':input') + '[placeholder]')
++				.not('.placeholder')
+ 				.bind('focus.placeholder', clearPlaceholder)
+@@ -23,4 +27,4 @@
+ 
+-		$.fn.placeholder.input = isInputSupported;
+-		$.fn.placeholder.textarea = isTextareaSupported;
++		placeholder.input = isInputSupported;
++		placeholder.textarea = isTextareaSupported;
+ 
+@@ -28,3 +32,3 @@
+ 			// Look for forms
+-			$('form').bind('submit.placeholder', function() {
++			$(document).delegate('form', 'submit.placeholder', function() {
+ 				// Clear the placeholder values so they don’t get submitted
+--- js/mylibs/jquery.ui.timepicker.js	Mon Jan 19 23:26:36 1970
++++ js/mylibs/jquery.ui.timepicker.js	Mon Jan 19 23:26:36 1970
+@@ -3,4 +3,4 @@
+ * By: Trent Richardson [http://trentrichardson.com]
+-* Version 0.9.7
+-* Last Modified: 10/02/2011
++* Version 0.9.8
++* Last Modified: 12/03/2011
+ * 
+@@ -14,4 +14,4 @@
+ * .ui-timepicker-div dl { text-align: left; }
+-* .ui-timepicker-div dl dt { height: 25px; }
+-* .ui-timepicker-div dl dd { margin: -25px 10px 10px 65px; }
++* .ui-timepicker-div dl dt { height: 25px; margin-bottom: -25px; }
++* .ui-timepicker-div dl dd { margin: 0 10px 10px 65px; }
+ * .ui-timepicker-div td { font-size: 90%; }
+@@ -22,3 +22,3 @@
+ 
+-$.extend($.ui, { timepicker: { version: "0.9.7" } });
++$.extend($.ui, { timepicker: { version: "0.9.8" } });
+ 
+@@ -56,6 +56,6 @@
+ 		showTime: true,
+-		stepHour: 0.05,
+-		stepMinute: 0.05,
+-		stepSecond: 0.05,
+-		stepMillisec: 0.5,
++		stepHour: 1,
++		stepMinute: 1,
++		stepSecond: 1,
++		stepMillisec: 1,
+ 		hour: 0,
+@@ -85,3 +85,5 @@
+ 		timezoneIso8609: false,
+-		timezoneList: null
++		timezoneList: null,
++		addSliderAccess: false,
++		sliderAccessArgs: null
+ 	};
+@@ -343,6 +345,6 @@
+ 			// - Example: if stepMinute is 15, then minMax is 45.
+-			hourMax = (o.hourMax - ((o.hourMax - o.hourMin) % o.stepHour)).toFixed(0),
+-            minMax  = (o.minuteMax - ((o.minuteMax - o.minuteMin) % o.stepMinute)).toFixed(0),
+-            secMax  = (o.secondMax - ((o.secondMax - o.secondMin) % o.stepSecond)).toFixed(0),
+-			millisecMax  = (o.millisecMax - ((o.millisecMax - o.millisecMin) % o.stepMillisec)).toFixed(0),
++			hourMax = parseInt((o.hourMax - ((o.hourMax - o.hourMin) % o.stepHour)) ,10),
++			minMax  = parseInt((o.minuteMax - ((o.minuteMax - o.minuteMin) % o.stepMinute)) ,10),
++			secMax  = parseInt((o.secondMax - ((o.secondMax - o.secondMin) % o.stepSecond)) ,10),
++			millisecMax  = parseInt((o.millisecMax - ((o.millisecMax - o.millisecMin) % o.stepMillisec)) ,10),
+ 			dp_id = this.inst.id.toString().replace(/([^A-Za-z0-9_])/g, '');
+@@ -367,6 +369,6 @@
+  			// Hours
++			html += '<dd class="ui_tpicker_hour"><div id="ui_tpicker_hour_' + dp_id + '"' +
++						((o.showHour) ? '' : noDisplay) + '></div>';
+ 			if (o.showHour && o.hourGrid > 0) {
+-				html += '<dd class="ui_tpicker_hour">' +
+-						'<div id="ui_tpicker_hour_' + dp_id + '"' + ((o.showHour)   ? '' : noDisplay) + '></div>' +
+-						'<div style="padding-left: 1px"><table class="ui-tpicker-grid-label"><tr>';
++				html += '<div style="padding-left: 1px"><table class="ui-tpicker-grid-label"><tr>';
+ 
+@@ -384,16 +386,14 @@
+ 
+-				html += '</tr></table></div>' +
+-						'</dd>';
+-			} else html += '<dd class="ui_tpicker_hour" id="ui_tpicker_hour_' + dp_id + '"' +
+-							((o.showHour) ? '' : noDisplay) + '></dd>';
++				html += '</tr></table></div>';
++			}
++			html += '</dd>';
+ 
++			// Minutes
+ 			html += '<dt class="ui_tpicker_minute_label" id="ui_tpicker_minute_label_' + dp_id + '"' +
+-					((o.showMinute) ? '' : noDisplay) + '>' + o.minuteText + '</dt>';
++					((o.showMinute) ? '' : noDisplay) + '>' + o.minuteText + '</dt>'+
++					'<dd class="ui_tpicker_minute"><div id="ui_tpicker_minute_' + dp_id + '"' +
++							((o.showMinute) ? '' : noDisplay) + '></div>';
+ 
+-			// Minutes
+ 			if (o.showMinute && o.minuteGrid > 0) {
+-				html += '<dd class="ui_tpicker_minute ui_tpicker_minute_' + o.minuteGrid + '">' +
+-						'<div id="ui_tpicker_minute_' + dp_id + '"' +
+-						((o.showMinute) ? '' : noDisplay) + '></div>' +
+-						'<div style="padding-left: 1px"><table class="ui-tpicker-grid-label"><tr>';
++				html += '<div style="padding-left: 1px"><table class="ui-tpicker-grid-label"><tr>';
+ 
+@@ -404,6 +404,5 @@
+ 
+-				html += '</tr></table></div>' +
+-						'</dd>';
+-			} else html += '<dd class="ui_tpicker_minute" id="ui_tpicker_minute_' + dp_id + '"' +
+-							((o.showMinute) ? '' : noDisplay) + '></dd>';
++				html += '</tr></table></div>';
++			}
++			html += '</dd>';
+ 
+@@ -411,9 +410,8 @@
+ 			html += '<dt class="ui_tpicker_second_label" id="ui_tpicker_second_label_' + dp_id + '"' +
+-					((o.showSecond) ? '' : noDisplay) + '>' + o.secondText + '</dt>';
++					((o.showSecond) ? '' : noDisplay) + '>' + o.secondText + '</dt>'+
++					'<dd class="ui_tpicker_second"><div id="ui_tpicker_second_' + dp_id + '"'+
++							((o.showSecond) ? '' : noDisplay) + '></div>';
+ 
+ 			if (o.showSecond && o.secondGrid > 0) {
+-				html += '<dd class="ui_tpicker_second ui_tpicker_second_' + o.secondGrid + '">' +
+-						'<div id="ui_tpicker_second_' + dp_id + '"' +
+-						((o.showSecond) ? '' : noDisplay) + '></div>' +
+-						'<div style="padding-left: 1px"><table><tr>';
++				html += '<div style="padding-left: 1px"><table><tr>';
+ 
+@@ -424,6 +422,5 @@
+ 
+-				html += '</tr></table></div>' +
+-						'</dd>';
+-			} else html += '<dd class="ui_tpicker_second" id="ui_tpicker_second_' + dp_id + '"'	+
+-							((o.showSecond) ? '' : noDisplay) + '></dd>';
++				html += '</tr></table></div>';
++			}
++			html += '</dd>';
+ 
+@@ -431,9 +428,8 @@
+ 			html += '<dt class="ui_tpicker_millisec_label" id="ui_tpicker_millisec_label_' + dp_id + '"' +
+-					((o.showMillisec) ? '' : noDisplay) + '>' + o.millisecText + '</dt>';
++					((o.showMillisec) ? '' : noDisplay) + '>' + o.millisecText + '</dt>'+
++					'<dd class="ui_tpicker_millisec"><div id="ui_tpicker_millisec_' + dp_id + '"'+
++							((o.showMillisec) ? '' : noDisplay) + '></div>';
+ 
+ 			if (o.showMillisec && o.millisecGrid > 0) {
+-				html += '<dd class="ui_tpicker_millisec ui_tpicker_millisec_' + o.millisecGrid + '">' +
+-						'<div id="ui_tpicker_millisec_' + dp_id + '"' +
+-						((o.showMillisec) ? '' : noDisplay) + '></div>' +
+-						'<div style="padding-left: 1px"><table><tr>';
++				html += '<div style="padding-left: 1px"><table><tr>';
+ 
+@@ -441,9 +437,8 @@
+ 					millisecGridSize++;
+-					html += '<td>' + ((l < 10) ? '0' : '') + s + '</td>';
++					html += '<td>' + ((l < 10) ? '0' : '') + l + '</td>';
+ 				}
+ 
+-				html += '</tr></table></div>' +
+-						'</dd>';
+-			} else html += '<dd class="ui_tpicker_millisec" id="ui_tpicker_millisec_' + dp_id + '"'	+
+-							((o.showMillisec) ? '' : noDisplay) + '></dd>';
++				html += '</tr></table></div>';
++			}
++			html += '</dd>';
+ 
+@@ -479,2 +474,3 @@
+ 
++			
+ 			// Updated by Peter Medeiros:
+@@ -488,3 +484,2 @@
+ 				slide: function(event, ui) {
+-					// update the global minute slider instance value with the current slider value
+ 					tp_inst.minute_slider.slider( "option", "value", ui.value);
+@@ -641,2 +636,28 @@
+ 			this.millisec_slider.bind('slidestop',onSelectDelegate);
++			
++			// slideAccess integration: http://trentrichardson.com/2011/11/11/jquery-ui-sliders-and-touch-accessibility/
++			if (this._defaults.addSliderAccess){
++				var sliderAccessArgs = this._defaults.sliderAccessArgs;
++				setTimeout(function(){ // fix for inline mode
++					if($tp.find('.ui-slider-access').length == 0){
++						$tp.find('.ui-slider:visible').sliderAccess(sliderAccessArgs);
++
++						// fix any grids since sliders are shorter
++						var sliderAccessWidth = $tp.find('.ui-slider-access:eq(0)').outerWidth(true);
++						if(sliderAccessWidth){
++							$tp.find('table:visible').each(function(){
++								var $g = $(this),
++									oldWidth = $g.outerWidth(),
++									oldMarginLeft = $g.css('marginLeft').toString().replace('%',''),
++									newWidth = oldWidth - sliderAccessWidth,
++									newMarginLeft = ((oldMarginLeft * newWidth)/oldWidth) + '%';
++						
++								$g.css({ width: newWidth, marginLeft: newMarginLeft });
++							});
++						}
++					}
++				},0);
++			}
++			// end slideAccess integration
++			
+ 		}
+@@ -734,6 +755,6 @@
+ 		if(adjustSliders !== undefined && adjustSliders === true){
+-			var hourMax = (this._defaults.hourMax - ((this._defaults.hourMax - this._defaults.hourMin) % this._defaults.stepHour)).toFixed(0),
+-                minMax  = (this._defaults.minuteMax - ((this._defaults.minuteMax - this._defaults.minuteMin) % this._defaults.stepMinute)).toFixed(0),
+-                secMax  = (this._defaults.secondMax - ((this._defaults.secondMax - this._defaults.secondMin) % this._defaults.stepSecond)).toFixed(0),
+-				millisecMax  = (this._defaults.millisecMax - ((this._defaults.millisecMax - this._defaults.millisecMin) % this._defaults.stepMillisec)).toFixed(0);
++			var hourMax = parseInt((this._defaults.hourMax - ((this._defaults.hourMax - this._defaults.hourMin) % this._defaults.stepHour)) ,10),
++                minMax  = parseInt((this._defaults.minuteMax - ((this._defaults.minuteMax - this._defaults.minuteMin) % this._defaults.stepMinute)) ,10),
++                secMax  = parseInt((this._defaults.secondMax - ((this._defaults.secondMax - this._defaults.secondMin) % this._defaults.stepSecond)) ,10),
++				millisecMax  = parseInt((this._defaults.millisecMax - ((this._defaults.millisecMax - this._defaults.millisecMin) % this._defaults.stepMillisec)) ,10);
+ 
+@@ -861,4 +882,4 @@
+ 	_updateDateTime: function(dp_inst) {
+-		dp_inst = this.inst || dp_inst,
+-			dt = new Date(dp_inst.selectedYear, dp_inst.selectedMonth, dp_inst.selectedDay),
++		dp_inst = this.inst || dp_inst;
++		var dt = $.datepicker._daylightSavingAdjust(new Date(dp_inst.selectedYear, dp_inst.selectedMonth, dp_inst.selectedDay)),
+ 			dateFmt = $.datepicker._get(dp_inst, 'dateFormat'),
+@@ -1206,3 +1227,3 @@
+ 			var b = this._base_formatDate(inst, day, month, year);
+-		tp_inst._updateDateTime();	
++		tp_inst._updateDateTime(inst);	
+ 		return tp_inst.$input.val();
+@@ -1257,3 +1278,5 @@
+ 	}
+-	this._base_optionDatepicker(target, name, value);
++	if (value === undefined)
++		return this._base_optionDatepicker(target, name);
++	return this._base_optionDatepicker(target, name, value);
+ };
+@@ -1272,3 +1295,3 @@
+ $.timepicker = new Timepicker(); // singleton instance
+-$.timepicker.version = "0.9.7";
++$.timepicker.version = "0.9.8";
+ 
+--- js/mylibs/jquery.ui.touch-punch.js	Mon Jan 19 23:26:36 1970
++++ js/mylibs/jquery.ui.touch-punch.js	Mon Jan 19 23:26:36 1970
+@@ -1,5 +1,5 @@
+ /*!
+- * jQuery UI Touch Punch 0.1.0
++ * jQuery UI Touch Punch 0.2.2
+  *
+- * Copyright 2010, Dave Furfero
++ * Copyright 2011, Dave Furfero
+  * Dual licensed under the MIT or GPL Version 2 licenses.
+@@ -12,4 +12,6 @@
+ 
+-	$.support.touch = typeof Touch === 'object';
++  // Detect touch support
++  $.support.touch = 'ontouchend' in document;
+ 
++  // Ignore browsers without touch support
+ 	if(!$.support.touch) {
+@@ -18,25 +20,51 @@
+ 
+-	var mouseProto = $.ui.mouse.prototype, _mouseInit = mouseProto._mouseInit, _mouseDown = mouseProto._mouseDown, _mouseUp = mouseProto._mouseUp, mouseEvents = {
+-		touchstart : 'mousedown',
+-		touchmove : 'mousemove',
+-		touchend : 'mouseup'
+-	};
++  var mouseProto = $.ui.mouse.prototype,
++      _mouseInit = mouseProto._mouseInit,
++      touchHandled;
++
++  /**
++   * Simulate a mouse event based on a corresponding touch event
++   * @param {Object} event A touch event
++   * @param {String} simulatedType The corresponding mouse event
++   */
++  function simulateMouseEvent (event, simulatedType) {
++
++    // Ignore multi-touch events
++    if (event.originalEvent.touches.length > 1) {
++      return;
++    }
+ 
+-	function makeMouseEvent(event) {
++    event.preventDefault();
+ 
+-		var touch = event.originalEvent.changedTouches[0];
++    var touch = event.originalEvent.changedTouches[0],
++        simulatedEvent = document.createEvent('MouseEvents');
+ 
+-		return $.extend(event, {
+-			type : mouseEvents[event.type],
+-			which : 1,
+-			pageX : touch.pageX,
+-			pageY : touch.pageY,
+-			screenX : touch.screenX,
+-			screenY : touch.screenY,
+-			clientX : touch.clientX,
+-			clientY : touch.clientY
+-		});
++    // Initialize the simulated mouse event using the touch event's coordinates
++    simulatedEvent.initMouseEvent(
++      simulatedType,    // type
++      true,             // bubbles                    
++      true,             // cancelable                 
++      window,           // view                       
++      1,                // detail                     
++      touch.screenX,    // screenX                    
++      touch.screenY,    // screenY                    
++      touch.clientX,    // clientX                    
++      touch.clientY,    // clientY                    
++      false,            // ctrlKey                    
++      false,            // altKey                     
++      false,            // shiftKey                   
++      false,            // metaKey                    
++      0,                // button                     
++      null              // relatedTarget              
++    );
++
++    // Dispatch the simulated event to the target element
++    event.target.dispatchEvent(simulatedEvent);
+ 	}
+ 
+-	mouseProto._mouseInit = function() {
++  /**
++   * Handle the jQuery UI widget's touchstart events
++   * @param {Object} event The widget element's touchstart event
++   */
++  mouseProto._touchStart = function (event) {
+ 
+@@ -44,24 +72,76 @@
+ 
+-		self.element.bind('touchstart.' + self.widgetName, function(event) {
+-			return self._mouseDown(makeMouseEvent(event));
+-		});
+-		_mouseInit.call(self);
+-	};
+-	mouseProto._mouseDown = function(event) {
++    // Ignore the event if another widget is already being handled
++    if (touchHandled || !self._mouseCapture(event.originalEvent.changedTouches[0])) {
++      return;
++    }
++
++    // Set the flag to prevent other widgets from inheriting the touch event
++    touchHandled = true;
++
++    // Track movement to determine if interaction was a click
++    self._touchMoved = false;
++
++    // Simulate the mouseover event
++    simulateMouseEvent(event, 'mouseover');
+ 
+-		var self = this, ret = _mouseDown.call(self, event);
++    // Simulate the mousemove event
++    simulateMouseEvent(event, 'mousemove');
+ 
+-		self._touchMoveDelegate = function(event) {
+-			return self._mouseMove(makeMouseEvent(event));
++    // Simulate the mousedown event
++    simulateMouseEvent(event, 'mousedown');
+ 		};
+-		self._touchEndDelegate = function(event) {
+-			return self._mouseUp(makeMouseEvent(event));
++
++  /**
++   * Handle the jQuery UI widget's touchmove events
++   * @param {Object} event The document's touchmove event
++   */
++  mouseProto._touchMove = function (event) {
++
++    // Ignore event if not handled
++    if (!touchHandled) {
++      return;
++    }
++
++    // Interaction was not a click
++    this._touchMoved = true;
++
++    // Simulate the mousemove event
++    simulateMouseEvent(event, 'mousemove');
+ 		};
+-		$(document)
+-		.bind('touchmove.' + self.widgetName, self._touchMoveDelegate)
+-		.bind('touchend.' + self.widgetName, self._touchEndDelegate);
+ 
+-		return ret;
++  /**
++   * Handle the jQuery UI widget's touchend events
++   * @param {Object} event The document's touchend event
++   */
++  mouseProto._touchEnd = function (event) {
++
++    // Ignore event if not handled
++    if (!touchHandled) {
++      return;
++    }
++
++    // Simulate the mouseup event
++    simulateMouseEvent(event, 'mouseup');
++
++    // Simulate the mouseout event
++    simulateMouseEvent(event, 'mouseout');
++
++    // If the touch interaction did not move, it should trigger a click
++    if (!this._touchMoved) {
++
++      // Simulate the click event
++      simulateMouseEvent(event, 'click');
++    }
++
++    // Unset the flag to allow other widgets to inherit the touch event
++    touchHandled = false;
+ 	};
+-	mouseProto._mouseUp = function(event) {
++
++  /**
++   * A duck punch of the $.ui.mouse _mouseInit method to support touch events.
++   * This method extends the widget with bound touch event handlers that
++   * translate touch events to mouse events and pass them to the widget's
++   * original mouse event handling methods.
++   */
++  mouseProto._mouseInit = function () {
+ 
+@@ -69,8 +149,12 @@
+ 
+-		$(document)
+-		.unbind('touchmove.' + self.widgetName, self._touchMoveDelegate)
+-		.unbind('touchend.' + self.widgetName, self._touchEndDelegate);
++    // Delegate the touch handlers to the widget's element
++    self.element
++      .bind('touchstart', $.proxy(self, '_touchStart'))
++      .bind('touchmove', $.proxy(self, '_touchMove'))
++      .bind('touchend', $.proxy(self, '_touchEnd'));
+ 
+-		return _mouseUp.call(self, event);
++    // Call the original $.ui.mouse init method
++    _mouseInit.call(self);
+ 	};
+-})(jQuery);
++
++})(jQuery);
+\ No newline at end of file
+--- css/content.css	Mon Jan 19 23:26:36 1970
++++ css/content.css	Mon Jan 19 23:26:36 1970
+@@ -49,2 +49,10 @@
+ 
++.webkit .push {
++	height: 60px;
++}
++
++.webkit .clear  + .push {
++	height: 38px;
++}
++
+ /* ==================================================
+@@ -256,3 +264,3 @@
+ 	border-top: 1px solid #C0C0C0;
+-	/* Gradien */
++	/* Gradient */
+ 	background: #fefefe; /* Old browsers */
+--- css/ie.fixes.css	Mon Jan 19 23:26:36 1970
++++ css/ie.fixes.css	Mon Jan 19 23:26:36 1970
+@@ -13,2 +13,15 @@
+  * ================================================== */
++ 
++ .ie7 .special_page .background {
++	text-align: left;
++	left: 50%;
++	margin-left: -395px;
++}
++
++ .ie7 .special_page .content .wrapper {
++	text-align: left;
++	left: 50%;
++	margin-left: -200px;
++}
++ 
+ .ie7 #nav_main li {
+@@ -18,9 +31,12 @@
+ 	zoom: 1;
+-}
+-.ie7 #nav_sub li {
+ 	display: inline;
+-	zoom: 1;
+ }
++
+ .ie7 #nav_main li a {
++	padding-top: 10px;
++}
+ 	
++.ie7 #nav_sub li {
++	display: inline;
++	zoom: 1;
+ }
+@@ -28,3 +44,3 @@
+ .ie7 #nav_main li ul {
+-	padding-top: 18px;
++	padding-top: 10px;
+ }
+@@ -70,2 +86,3 @@
+ 	zoom:1;
++	display: inline;
+ 	
+@@ -74,2 +91,3 @@
+ .ie7 .step {
++	zoom: 1;
+ 	display: inline;
+@@ -86,3 +104,5 @@
+ .ie7 .gallery li {
++	zoom: 1;
+ 	display: inline;
++	background: #000;
+ }
+@@ -90,2 +110,3 @@
+ .ie7 .activity .avatar {
++	zoom: 1;
+ 	display: inline;
+@@ -94,2 +115,3 @@
+ .ie7 .activity .description {
++	zoom: 1;
+ 	display: inline;
+--- css/sprite.forms.css	Mon Jan 19 23:26:36 1970
++++ css/sprite.forms.css	Mon Jan 19 23:26:36 1970
+@@ -799,4 +799,4 @@
+ .ui-timepicker-div dl { text-align: left; }
+-.ui-timepicker-div dl dt { height: 25px; }
+-.ui-timepicker-div dl dd { margin: -25px 10px 10px 65px; }
++.ui-timepicker-div dl dt { height: 25px; margin-bottom: -25px; }
++.ui-timepicker-div dl dd { margin: 0 10px 10px 65px; }
+ .ui-timepicker-div td { font-size: 90%; }
+--- css/sprite.tables.css	Mon Jan 19 23:26:36 1970
++++ css/sprite.tables.css	Mon Jan 19 23:26:36 1970
+@@ -135,2 +135,18 @@
+ 
++.dataTables_processing {
++	background-color: white;
++	border: 1px solid #DDDDDD;
++	color: #999999;
++	font-size: 14px;
++	height: 30px;
++	left: 50%;
++	margin-left: -125px;
++	margin-top: -15px;
++	padding: 14px 0 2px;
++	position: absolute;
++	text-align: center;
++	top: 50%;
++	width: 250px;
++}
++
+ .table thead {
+--- css/sprites.css	Mon Jan 19 23:26:36 1970
++++ css/sprites.css	Mon Jan 19 23:26:36 1970
+@@ -167,2 +167,10 @@
+ 
++button[disabled], input[type="submit"][disabled], input[type="reset"][disabled], a.button[disabled] {
++	color: #D3D3D3;
++	border: 1px solid #c7c7c7;
++	background: url(/images/peach/sprites/buttons/normal/bg.png);
++	cursor: default;
++	text-shadow: 0 0 0;
++}
++
+ /* ==================================================
+--- css/typographics.css	Mon Jan 19 23:26:36 1970
++++ css/typographics.css	Mon Jan 19 23:26:36 1970
+@@ -393,2 +393,9 @@
+ 
++button[disabled], input[type="submit"][disabled], a.button[disabled] {
++	color: #58646d;
++
++	text-shadow: none;
++	filter: none;
++}
++
+ /* ==================================================

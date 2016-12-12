@@ -1,0 +1,84 @@
+//Bottomsheet List-Grid
+
+.bottomSheetdemoBasicUsage .md-grid-text {
+  padding-bottom: 5px; }
+
+.bottomSheetdemoBasicUsage md-list-item, .bottomSheetdemoBasicUsage md-list-item .md-list-item-inner {
+  min-height: 48px; }
+
+.bottomSheetdemoBasicUsage h2 {
+  line-height: 36px;
+  padding-top: 10px; }
+
+.bottomSheetdemoBasicUsage .md-subheader .md-subheader-inner {
+  padding: 0; }
+
+.bottomSheetdemoBasicUsage md-toast .md-toast-content {
+  background-color: #B14141; }
+
+.bottomSheetdemoBasicUsage md-toast > * {
+  font-weight: bolder; }
+
+//Button
+
+
+.buttondemoBasicUsage section {
+  background: #f7f7f7;
+  border-radius: 3px;
+  text-align: center;
+  margin: 1em;
+  position: relative !important;
+  padding-bottom: 10px; }
+
+.buttondemoBasicUsage md-content {
+  margin-right: 7px; }
+
+.buttondemoBasicUsage section .md-button {
+  margin-top: 16px;
+  margin-bottom: 16px; }
+
+.buttondemoBasicUsage .label {
+  position: absolute;
+  bottom: 5px;
+  left: 7px;
+  font-size: 14px;
+  opacity: 0.54; 
+  
+  
+  //index
+  
+  .navBardemoBasicUsage md-content .ext-content {
+  padding: 50px;
+  margin: 20px;
+  background-color: #FFF2E0; }
+  
+  
+  //chips
+  
+  .chipsdemoCustomInputs md-content.autocomplete {
+  min-height: 200px; }
+
+.chipsdemoCustomInputs input[type=number] {
+  width: 110px; }
+
+.chipsdemoCustomInputs .veggie-option {
+  float: left;
+  width: 20%;
+  box-sizing: border-box;
+  padding: 0 8px; }
+
+.chipsdemoCustomInputs .veggie-option .md-item-text {
+  padding: 8px;
+  background: #f0f0f0;
+  border-radius: 3px; }
+
+.chipsdemoCustomInputs .veggie-option .md-item-text h3,
+.chipsdemoCustomInputs .veggie-option .md-item-text p {
+  padding: 0;
+  margin: 0; }
+
+
+/*
+Copyright 2016 Google Inc. All Rights Reserved. 
+Use of this source code is governed by an MIT-style license that can be foundin the LICENSE file at http://material.angularjs.org/HEAD/license.
+*/

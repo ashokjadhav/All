@@ -1,0 +1,256 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>&lt;HTML&gt;LION.com Demo</title>
+<link href="css/css.css" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+<style>
+/* Default
+============================================================ */
+.switch {
+	display: block;
+	padding: 0 10px 20px 0;
+}
+.switch h3 {
+	font-weight: normal;
+}
+.toggle {
+	position: absolute;
+	margin-left: -9999px;
+	visibility: hidden;
+}
+.toggle + label {
+	display: block;
+	position: relative;
+	cursor: pointer;
+	border-radius: 60px;
+	padding: 2px;
+	width: 150px;
+	height: 50px;
+	overflow: hidden;
+}
+.toggle + label:before, .toggle + label:after {
+	display: block;
+	border-radius: 60px;
+	position: absolute;
+	top: 1px;
+	left: 1px;
+	bottom: 1px;
+	padding: 15px;
+	color: #FFF;
+}
+.toggle + label:before {
+	content: "On";
+	right: 1px;
+	background-color: #bfbfbf;
+	text-indent: -90px;
+}
+.toggle + label:after {
+	content: "Off";
+	text-indent: 90px;
+	width: 20px;
+	background-color: #fff;
+	margin: 1px;
+	box-shadow: 0 2px 5px rgba(000,000,000,0.2)
+}
+.toggle:checked + label:before {
+	background-color: #0088cc;
+	text-indent: 0;
+}
+.toggle:checked + label:after {
+	margin-left: 101px;
+	box-shadow: none;
+}
+/* SWITCH 1 - ROUND FLAT
+============================================================ */
+input.toggle-round-flat + label {
+	background-color: #bfbfbf;
+}
+input.toggle-round-flat + label:before, input.toggle-round-flat + label:after {
+	top: 2px;
+	bottom: 2px;
+	left: 2px;
+	box-shadow: none;
+	color: #000;
+}
+input.toggle-round-flat + label:before {
+	right: 2px;
+	background-color: #FFF;
+}
+input.toggle-round-flat + label:after {
+	width: 18px;
+	background-color: #bfbfbf;
+	border: none;
+	margin: 2px;
+}
+input.toggle-round-flat:checked + label {
+	background-color: #0088cc;
+}
+input.toggle-round-flat:checked + label:before {
+	background-color: #FFF;
+}
+input.toggle-round-flat:checked + label:after {
+	margin-left: 100px;
+	background-color: #0088cc;
+}
+/* SWITCH 2 - YES NO
+============================================================ */
+input.toggle-round-yes-no + label {
+	text-align: center;
+	height: 55px;
+}
+input.toggle-round-yes-no + label:before, input.toggle-round-yes-no + label:after {
+	width: 100%;
+	height: 58%;
+	padding-top: 12%;
+	color: #FFF;
+	border-radius: 0;
+	padding-left: 0;
+	padding-right: 0;
+}
+input.toggle-round-yes-no + label:before {
+	content: "No";
+	backface-visibility: hidden;
+	background-color: #bfbfbf;
+	text-indent: inherit;
+}
+input.toggle-round-yes-no + label:after {
+	content: "Yes";
+	backface-visibility: hidden;
+	transform: rotateY(180deg);
+	background-color: #0088cc;
+	text-indent: inherit;
+}
+input.toggle-round-yes-no:checked + label:before {
+	transform: rotateY(180deg);
+}
+input.toggle-round-yes-no:checked + label:after {
+	transform: rotateY(0);
+	margin-left: 0;
+}
+/* SWITCH 3 - RIGHT LEFT
+============================================================ */
+input.toggle-round-right-left + label {
+	text-align: center;
+	overflow: hidden;
+	height: 55px;
+	border-radius: 0;
+}
+input.toggle-round-right-left + label:before, input.toggle-round-right-left + label:after {
+	width: 100%;
+	height: 58%;
+	padding-top: 12%;
+	color: #FFF;
+	border-radius: 0;
+	padding-left: 0;
+	padding-right: 0;
+	padding-bottom: 5px;
+}
+input.toggle-round-right-left + label:before {
+	content: "Um..";
+	background-color: #bfbfbf;
+	text-indent: inherit;
+}
+input.toggle-round-right-left + label:after {
+	content: "Yup!";
+	background-color: #0088cc;
+	top: 0;
+	left: -101%;
+	box-shadow: none;
+	text-indent: inherit;
+}
+input.toggle-round-right-left:checked + label:before {
+	left: 83%;
+	background-color: #e7e7e7;
+}
+input.toggle-round-right-left:checked + label:after {
+	margin-left: 0;
+	left: 0;
+}
+/* SWITCH 3 - LIGHT
+============================================================ */
+.light-switch label {
+	background: #bfbfbf;
+}
+.light-switch label:after {
+	content: "Off";
+	position: absolute;
+	background-color: inherit;
+	box-shadow: none;
+	text-indent: 10px;
+	line-height: 20px;
+}
+.light-switch label:before {
+	content: "On";
+	position: absolute;
+	border-radius: inherit;
+	text-indent: -200px;
+	padding: 0;
+	width: 10%;
+	height: 17px;
+	left: 80%;
+	top: 34%;
+	z-index: 9;
+	background: radial-gradient(40% 35%, #ccc, #969696 60%);
+	box-shadow: inset 0 2px 4px 1px rgba(0,0,0,0.3), 0 1px 0 rgba(255,255,255,1), inset 0 1px 0 white;
+	line-height: 18px;
+}
+.light-switch input:checked ~ label:before {
+	background: radial-gradient(40% 35%, #45b8f2, #0088cc 60%);
+	box-shadow: inset 0 3px 5px 1px rgba(0,0,0,0.1), 0 1px 0 rgba(255,255,255,0.4), 0 0 10px 2px rgba(0, 136, 204, 0.5);
+	text-indent: -100px;
+}
+.light-switch input:checked + label:after {
+	text-indent: -200px;
+}
+/* Transition
+============================================================ */
+.toggle + label:before, .toggle + label:after {
+	transition: All 0.5s ease;
+	-webkit-transition: All 0.5s ease;
+	-moz-transition: All 0.5s ease;
+	-o-transition: All 0.5s ease;
+}
+</style>
+</head>
+
+<body>
+<div id="wrapper">
+		<header id="header"> <a href="http://htmllion.com/" id="logo"  target="_blank" title="htmllion" > &lt;HTML&gt;<span>Lion</span></a></header>
+		<section>
+				<h2>Toggle Switch</h2>
+				<!--SWITCH ROUND-->
+				<div class="switch">
+						<h3>Toggle Switch Round</h3>
+						<input id="toggle-1" class="toggle" type="checkbox" />
+						<label for="toggle-1"></label>
+				</div>
+				<!--SWITCH 1 - ROUND FLAT-->
+				<div class="switch">
+						<h3>Toggle Switch Round Flat</h3>
+						<input id="toggle-2" class="toggle toggle-round-flat" type="checkbox" />
+						<label for="toggle-2"></label>
+				</div>
+				<!--SWITCH 2 - YES NO-->
+				<div class="switch">
+						<h3>Toggle Switch Yes No</h3>
+						<input id="toggle-3" class="toggle toggle-round-yes-no" type="checkbox" />
+						<label for="toggle-3"></label>
+				</div>
+				<!--SWITCH 3 - RIGHT LEFT-->
+				<div class="switch">
+						<h3>Toggle Switch Right Left</h3>
+						<input id="toggle-4" class="toggle toggle-round-right-left" type="checkbox" />
+						<label for="toggle-4"></label>
+				</div>
+				<!--SWITCH 4 - LIGHT-->
+				<div class="switch light-switch">
+						<h3>Toggle Switch Light</h3>
+						<input id="toggle-5" class="toggle" type="checkbox">
+						<label for="toggle-5"></label>
+				</div>
+		</section>
+</div>
+</body>
+</html>

@@ -1,0 +1,140 @@
+Changelog :: PEACH
+==================
+
+==========================
+27.01.2012: Version 1.2:
+==========================
+Features:
+- Disabled buttons (add 'disabled' tag)
+
+Bugs fixed:
+- Display Problems with IE7
+  - No Charts in IE 7
+- Bug with sidebar in Chrome (see dashboard.html for fix)
+- Bug with toolbar menu
+- Bug when using WYSIWYG with form validation
+- Calendar events do not "snap" to days
+
+Updates:
+- jQuery Touch Punch
+- jQuery UI Time Picker
+- jQuery Placeholder
+
+------------------------
+Diff available at CHANGES.diff
+
+Updated files:
+
+- js/
+	mylibs/
+			fullcalendar.js
+			jquery.placeholder.js
+			jquery.ui.timepicker.js
+			jquery.ui.touch-punch.js
+	script.js
+
+- css/
+	content.css
+	ie.fixes.css
+	sprite.forms.css
+	sprite.tables.css
+	sprites.css
+	typographics.css
+
+- calenadar.html
+- charts.html
+- dashboard.html
+- editor.html
+
+
+New files:
+
+- js/
+	mylibs/
+		flot/
+			excanvas.js
+		jwysiwyg/
+			plugins/
+				wysiwyg.autoload.js
+				wysiwyg.fullscreen.js
+				wysiwyg.i18n.js
+				wysiwyg.rmFormat.js
+
+========================
+03.12.2011: Version 1.1:
+========================
+
+Features:
+- Activity stream item's width can be set from CSS (fixed, max-width; small, medium, large; equal widths of all items)
+- Set opened tab via hash: http://envato.stammtec.de/themeforest/peach/charts.html#tab-area
+- jQuery DatePicker + TimePicker + DateTimePicker
+- Styling of file inputs
+
+Bugs fixed:
+- Footer links not clickable, when scrollbars are shown
+- When having a page with the sidebar and long content, the sidebar isn't on full height
+- IE9 problems with gradients and border-radius
+- Minor JS problems in form validation
+- Flickering of elements when JS is not fully loaded (DOM flickering)
+- Small bug with borders on datatables
+
+Improvements:
+- Styling of wizard sidebar doesn't style additional (custom) span, small, strong any more
+
+Updates:
+- jQuery 1.6.4 => 1.7.1
+
+------------------------
+Diff available at: CHANGES.diff or http://pastebin.com/au0UfiVG
+
+Updated files:
+- css/
+	content.css
+	header.css
+	footer.css
+	ie.fixes.css
+	navigation.css
+	sidebar.css
+	sprite.forms.css
+	sprite.tables.css
+	sprite.wizard.css
+	typographics.css
+- docs/
+	<all files>
+- js/
+	mylibs/
+		jquery.ba-resize.js
+	plugins.js
+	script.js
+- <all .html files>
+
+New files:
+- docs/
+	color-theme/
+- js/
+	libs/
+		jquery-1.7.1.js
+		jquery-1.7.1.min.js
+	mylibs/
+		jwysiwyg/
+			controls/
+				<all files>
+			plugins/
+				<all files>
+		fullcalendar.gcal.js
+		jquery.fileinput.js
+		jquery.text-overflow.js
+		jquery.ui.timepicker.js
+
+Deleted files:
+- js/
+	libs/
+		jquery-1.6.4.js
+		jquery-1.6.4.min.js
+
+		
+=======================
+11.11.2011: Version 1.0
+=======================
+
+- Initial release

@@ -1,0 +1,1491 @@
+<!doctype html>  
+<!--[if IE 6 ]><html lang="en-us" class="ie6"> <![endif]-->
+<!--[if IE 7 ]><html lang="en-us" class="ie7"> <![endif]-->
+<!--[if IE 8 ]><html lang="en-us" class="ie8"> <![endif]-->
+<!--[if (gt IE 7)|!(IE)]><!-->
+<html lang="en-us"><!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	
+	<title>Peach - Clean & Smooth Admin Template</title>
+	
+	<meta name="description" content="Thank you for purchasing my theme. If you have any questions that are beyond the scope of this help file, please feel free to email via my user page contact form here.
+Thanks so much!">
+	<meta name="author" content="Simon Stamm (~Stammi)">
+	<meta name="copyright" content="Simon Stamm (~Stammi)">
+	<meta name="generator" content="Documenter v1.5 http://rxa.li/documenter">
+	<meta name="date" content="2011-11-30T00:00:00+01:00">
+	
+	<link rel="stylesheet" href="css/documenter_style.css" media="all">
+	<link rel="stylesheet" href="css/custom.css" media="screen">
+
+	<script src="js/jquery.1.6.4.js"></script>
+	
+	<script src="js/jquery.scrollTo-1.4.2-min.js"></script>
+	<script src="js/jquery.easing.js"></script>
+	
+	<link rel="stylesheet" href="css/shDocumenter.css" media="screen">
+	<script src="js/shCore.js"></script>
+	<script src="js/shBrushXml.js"></script>
+	<script src="js/shBrushJScript.js"></script>
+	<script>SyntaxHighlighter.defaults['toolbar'] = false;SyntaxHighlighter.all();</script>
+
+	<script>document.createElement('section');var duration=500,easing='swing';</script>
+	<script src="js/script.js"></script>
+	
+	<style>
+		html{background-color:#EEEEEE;color:#383838;}
+		::-moz-selection{background:#333636;color:#00DFFC;}
+		::selection{background:#333636;color:#00DFFC;}
+		#documenter_sidebar #documenter_logo{background-image:url(assets/images/image_1.jpg);}
+		a{color:#008C9E;}
+		hr{border-top:1px solid #D4D4D4;border-bottom:1px solid #FFFFFF;}
+		#documenter_sidebar, #documenter_sidebar ol a{background-color:#343838;color:#FFFFFF;}
+		#documenter_sidebar ol a{-webkit-text-shadow:1px 1px 0px #494F4F;-moz-text-shadow:1px 1px 0px #494F4F;text-shadow:1px 1px 0px #494F4F;}
+		#documenter_sidebar ol{border-top:1px solid #212424;}
+		#documenter_sidebar ol a{border-top:1px solid #494F4F;border-bottom:1px solid #212424;color:#FFFFFF;}
+		#documenter_sidebar ol a:hover{background:#333636;color:#00DFFC;border-top:1px solid #333636;}
+		#documenter_sidebar ol a.current{background:#333636;color:#00DFFC;border-top:1px solid #333636;}
+		#documenter_copyright{display:block !important;visibility:visible !important;}
+	</style>
+	
+</head>
+<body>
+	<div id="documenter_sidebar">
+		<a href="#documenter_cover" id="documenter_logo"></a>
+		<ol id="documenter_nav">
+			<li><a class="current" href="#documenter_cover">Start</a></li>
+			<li><a href="#getting_started">Getting Started</a>
+				<ol>
+					<li><a href="#getting_started_included_files">Included Files</a>
+				</ol>
+			</li>
+			<li><a href="#howto_s">HowTo's</a>
+				<ol>
+					<li><a href="#howto_s_how_to_start">How to start</a>
+					<li><a href="#howto_s_how_to_ajust_the_color_theme">How to adjust the color theme</a>
+					<li><a href="#howto_s_how_to_include_the_sidebar">How to include the sidebar</a>
+					<li><a href="#howto_s_how_to_get_the_fixed_version">How to get the fixed version</a>
+				</ol>
+			</li>
+			<li><a href="#sprites">Sprites</a>
+				<ol>
+					<li><a href="#sprites_activity_stream">Activity Stream</a>
+					<li><a href="#sprites_accordion">Accordion</a>
+					<li><a href="#sprites_alert_boxes">Alert Boxes</a>
+					<li><a href="#sprites_block_lists">Block Lists</a>
+					<li><a href="#sprites_buttons">Buttons</a>
+					<li><a href="#sprites_boxes">Boxes</a>
+					<li><a href="#sprites_contact_list">Contact List</a>
+					<li><a href="#sprites_footer_buttons">Footer Buttons</a>
+					<li><a href="#sprites_forms">Forms</a>
+					<li><a href="#sprites_gallery">Gallery</a>
+					<li><a href="#sprites_toolbar">Toolbar</a>
+					<li><a href="#sprites_shortcuts">Shortcuts</a>
+					<li><a href="#sprites_sidebar">Sidebar</a>
+					<li><a href="#sprites_sidebar_navigation">Sidebar Navigation</a>
+					<li><a href="#sprites_stats_list">Stats List</a>
+					<li><a href="#sprites_steps">Steps</a>
+					<li><a href="#sprites_tables">Tables</a>
+					<li><a href="#sprites_tabs">Tabs</a>
+					<li><a href="#sprites_user_info">User Info</a>
+					<li><a href="#sprites_wizard">Wizard</a>
+				</ol>
+			</li>
+			<li><a href="#plugins">Plugins</a>
+				<ol>
+					<li><a href="#plugins_tipsy">Tipsy</a>
+					<li><a href="#plugins_fallr">Fallr</a>
+					<li><a href="#plugins_jgrowl">jGrowl</a>
+					<li><a href="#plugins_minicolors">MiniColors</a>
+					<li><a href="#plugins_flot">Flot</a>
+					<li><a href="#plugins_elfinder">elFinder</a>
+					<li><a href="#plugins_fullcalendar">FullCalendar</a>
+					<li><a href="#plugins_jwysiwyg_rich_text_editor_">jWysiwyg (Rich Text Editor)</a>
+				</ol>
+			</li>
+			<li><a href="#faq">FAQ</a>
+				<ol>
+					<li><a href="#faq_in_my_javascript_i_need_jquery_$_immediately">In my Javascript I need jQuery ($) immediately</a>
+					<li><a href="#faq_i_want_a_box_with_no_padding">I want a box with no padding</a>
+					<li><a href="#faq_i_want_the_grey_box_header_as_shown_in_the_documentation_screenshot">I want the grey box header as shown in the documentation screenshot</a>
+					<li><a href="#faq_i_want_the_date_time_picker_to_show_the_current_date_time">I want the date(time)picker to show the current date/time</a>
+				</ol>
+			</li>
+			<li><a href="#credits">Credits</a>
+				<ol>
+					<li><a href="#credits_credits">Credits</a>
+				</ol>
+			</li>
+			<li><a href="#changelog">Changelog</a></li>
+			<li><a href="#final_words">Final Words</a></li>
+
+		</ol>
+		<div id="documenter_copyright">Copyright Simon Stamm (~Stammi) 2011<br>
+		made with the <a href="http://rxa.li/documenter">Documenter v1.5</a> 
+		</div>
+	</div>
+	<div id="documenter_content">
+	<section id="documenter_cover"><h1>Peach</h1><h2>Clean & Smooth Admin Template</h2><hr><ul><li>Created: 11/12/2011</li><li>latest Update: 01/27/2012</li><li>By: Simon Stamm (~Stammi)</li><li><a href="http://envato.stammtec.de/themeforest/peach/">envato.stammtec.de/themeforest/peach/</a></li><li>Email: <a href="mailto:&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#64;&#115;&#116;&#97;&#109;&#109;&#116;&#101;&#99;&#46;&#100;&#101;">&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#64;&#115;&#116;&#97;&#109;&#109;&#116;&#101;&#99;&#46;&#100;&#101;</a></li></ul><p>Thank you for purchasing my theme. If you have any questions that are beyond the scope of this help file, please feel free to email via my user page contact form here.
+Thanks so much!</p></section><section id="getting_started">
+	<h3>Getting Started</h3><hr class="notop">
+<p>
+	Peach is a clean and smooth admin template for huge and small backend solutions. It includes custom plugins, forms, validations, charts, tables, notifications and much more. The template is built on HTML5 with CSS3 features powered by jQuery and modernizr.</p>
+<h4 id="getting_started_included_files">Included Files</h4>
+<ul>
+	<li>
+		<strong>css/</strong>
+		<ul>
+			<li>
+				<strong>960gs/</strong>
+				<ul>
+					<li>
+						fixed.css <i>Grid-Sytem: fixed</i></li>
+					<li>
+						fluid.css <i>Grid-System: fluid</i></li>
+				</ul>
+			</li>
+			<li>
+				<strong>external/ </strong><i>External CSS files delivered with the theme&#39;s plugins</i>
+				<ul>
+					<li>
+						jquery-ui-1.8.16.custom.css <em>The custom jQueryUI style</em></li>
+				</ul>
+			</li>
+			<li>
+				<strong>h5bp/ </strong><i>Styles delivered with Html5Boilerplate</i><br>
+				&nbsp;</li>
+			<li>
+				header.css <span style="font-style: italic;">Header</span></li>
+			<li>
+				navigatioin.css N<i>avigation</i></li>
+			<li>
+				content.css <i>Styling of the page&#39;s content</i></li>
+			<li>
+				sidebar.css <i>Sidebar</i></li>
+			<li>
+				footer.css <i>Footer</i><br>
+				&nbsp;</li>
+			<li>
+				typography.css <i>Typography</i></li>
+			<li>
+				sprites.css <i>Frequently Used Sprites</i><br>
+				&nbsp;</li>
+			<li>
+				ie.fixes.css <i>CSS fixes concerning IE</i></li>
+			<li>
+				plugin.*.css <i>Different custom styles used for jQuery-Plugins</i></li>
+			<li>
+				sprite.*.css <span style="font-style: italic;">All kinds of sprites (see below)</span></li>
+		</ul>
+	</li>
+	<li>
+		<strong>js/</strong>
+		<ul>
+			<li>
+				<strong>libs/</strong> <span style="font-style: italic;">Scripts </span><i>delivered together with H5BP</i>
+				<ul>
+					<li>
+						jquery-1.7.1.js</li>
+					<li>
+						jquery-1.7.1.min.js</li>
+					<li>
+						jquery-ui-1.8.16.min.js</li>
+					<li>
+						modernizr-2.0.6.min.js</li>
+				</ul>
+			</li>
+			<li>
+				<strong>mylibs/</strong> <i>Scripts delivered with Peach</i>
+				<ul>
+					<li>
+						flot/ <i>jQuery plotting library</i></li>
+					<li>
+						jwysiwyg/ <em>jQuery rte plugin</em></li>
+				</ul>
+			</li>
+			<li>
+				plugins.js <em>Small own jQuery plugins</em></li>
+			<li>
+				script.js <em>All stuff needed for the theme</em></li>
+		</ul>
+	</li>
+	<li>
+		<strong>img/</strong>
+		<ul>
+			<li>
+				<strong>external/</strong> <em>Images delivered with the plugins</em></li>
+			<li>
+				<strong>icons/</strong> <em>Several icon packs</em></li>
+			<li>
+				<em>Other folders with images belonging to the theme</em></li>
+		</ul>
+	</li>
+</ul>
+<ul>
+	<li>
+		_empty.html</li>
+</ul>
+<ul>
+	<li>
+		404.html</li>
+	<li>
+		alert_boxes.html</li>
+	<li>
+		calendar.html</li>
+	<li>
+		charts.html</li>
+	<li>
+		dashboard.html</li>
+	<li>
+		editor.html</li>
+	<li>
+		explorer.html</li>
+	<li>
+		forms.html</li>
+	<li>
+		gallery.html</li>
+	<li>
+		lists.html</li>
+	<li>
+		login.html</li>
+	<li>
+		notifications.html</li>
+	<li>
+		messages.html</li>
+	<li>
+		tables.html</li>
+	<li>
+		tabs.html</li>
+	<li>
+		tooltipshtml</li>
+	<li>
+		wizard.html</li>
+</ul>
+</section>
+<section id="howto_s">
+	<h3>HowTo's</h3><hr class="notop">
+<h4 id="howto_s_how_to_start">How to start</h4>
+<p>
+	To start with Peach, I&#39;ve included an &quot;empty&quot; file (<em>_empty.html</em>). There you&#39;ll find the generic markup and structure explained with comments.</p>
+<p>
+	The best way to understand Peach is to analyze each demonstration page with <a href="http://getfirebug.com/">FireBug</a> or similar.</p>
+<h4 id="howto_s_how_to_ajust_the_color_theme">How adjust the color theme</h4>
+<p>
+	To customize the color theme, go to <a href="http://envato.stammtec.de/themeforest/peach/ctg/">the Color Theme Generator</a> and follow the instructions.</p>
+<h4 id="howto_s_how_to_include_the_sidebar">How to include the sidebar</h4>
+<p>
+	See <a href="#sprites_sidebar">sidebar section</a>.</p>
+<h4 id="howto_s_how_to_get_the_fixed_version">How to get the fixed version</h4>
+<p>
+	Simply change the line</p>
+<pre class="brush: html">
+&lt;link rel=&quot;stylesheet&quot; href=&quot;css/960gs/fluid.css&quot;&gt;</pre>
+<p>
+	to</p>
+<pre class="brush: html">
+&lt;link rel=&quot;stylesheet&quot; href=&quot;css/960gs/fixed.css&quot;&gt;</pre>
+<p>
+	Please remember, that in the fixed version the widths aren&#39;t relative. So the usage of <tt>.grid_8</tt> inside a <tt>.grid_4</tt> will fail.</p>
+</section>
+<section id="sprites">
+	<h3>Sprites</h3><hr class="notop">
+<p>
+	Peach comes with a lot of elements (I call them <i>sprites</i>). These include the header toolbar or the sidebar navigation. Let&#39;s go through and you&#39;ll learn how to use them.</p>
+<h4 id="sprites_activity_stream">Activity Stream</h4>
+<p>
+	<img alt="" src="assets/images/image_7.png" style="width: 288px; height: 78px;"></p>
+<p>
+	The activity stream is a list of system messages. It allows you to inform the user about the lastest system messages and updates since his last login. The markup is the following:</p>
+<pre class="brush: html">
+&lt;div class=&quot;activity&quot;&gt;
+&nbsp;&nbsp; &nbsp;&lt;div class=&quot;avatar&quot;&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &lt;img src=&quot;img/sprites/activity-stream/avatar.png&quot; width=&quot;52&quot; height=&quot;52&quot;&gt;
+&nbsp;&nbsp; &nbsp;&lt;/div&gt;
+&nbsp;&nbsp; &nbsp;&lt;div class=&quot;description&quot;&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &lt;span&gt;&lt;/span&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &lt;a href=&quot;#&quot;&gt;John Doe&lt;/a&gt; added 2 new tasks.
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &lt;small&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;a href=&quot;&quot;&gt;Contact host support&lt;/a&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &lt;/small&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &lt;ul class=&quot;toolbar&quot;&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;li&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;a href=&quot;#&quot;&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;img src=&quot;img/icons/packs/fugue/16x16/shadeless/balloon-facebook-left.png&quot;&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;/a&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;/li&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;li&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;a href=&quot;#&quot;&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;img src=&quot;img/icons/packs/fugue/16x16/shadeless/mail-send.png&quot;&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;/a&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;/li&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;li&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;a href=&quot;#&quot;&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;img src=&quot;img/icons/packs/fugue/16x16/shadeless/alarm-clock.png&quot;&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;/a&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;/li&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &lt;/ul&gt;
+&nbsp;&nbsp; &nbsp;&lt;/div&gt;
+&lt;/div&gt;
+
+</pre>
+<p class="brush: html">
+	Additionally the width of the activity items can be set in multiple ways:</p>
+<p class="brush: html" style="margin-left: 40px;">
+	<strong>fixed:</strong> This will give the items a fixed width.<br>
+	<strong>max-width:</strong> Using this no item will grow further than the given width</p>
+<p class="brush: html" style="margin-left: 40px;">
+	<strong>small, medium, large</strong>: These are the widths you can set using fixed and max-width</p>
+<p class="brush: html" style="margin-left: 40px;">
+	&nbsp;</p>
+<p class="brush: html" style="margin-left: 40px;">
+	<strong>equal</strong>: All items will have the same width according to the widest item.</p>
+<p class="brush: html">
+	These options are set as classes:</p>
+<pre class="brush: html">
+&lt;div class=&quot;activity fixed small&quot;&gt;
+&nbsp;&nbsp; &nbsp;{...}
+&lt;/div&gt;
+
+&lt;div class=&quot;activity max-width medium&quot;&gt;
+&nbsp;&nbsp; &nbsp;{...}
+&lt;/div&gt;
+
+&lt;div class=&quot;activity equal&quot;&gt;
+&nbsp;&nbsp; &nbsp;{...}
+&lt;/div&gt;</pre>
+<p class="info">
+	An example can be found on <a href="../Template/lists.html">lists.html</a>.</p>
+<h4 id="sprites_accordion">Accordion</h4>
+<p>
+	<img alt="" src="assets/images/image_33.png" style="width: 564px; height: 325px;"></p>
+<p>
+	To learn how to use accordions, see <a href="http://jqueryui.com/demos/accordion/">http://jqueryui.com/demos/accordion/</a>.</p>
+<h5>
+	Requirements:</h5>
+<p style="margin-left: 40px;">
+	<em>CSS</em>:<br>
+	- external/jquery-ui-1.8.16.custom.css</p>
+<p class="info">
+	You can find a live demo on <a href="../Template/lists.html">lists.html</a>.</p>
+<h4 id="sprites_alert_boxes">Alert Boxes</h4>
+<p>
+	<img alt="" src="assets/images/image_26.png" style="width: 506px; height: 32px;"></p>
+<p>
+	An alert box is generally coded like this:</p>
+<pre class="brush: html">
+&lt;div class=&quot;alert <i>message-type</i>&quot;&gt;
+&nbsp;&nbsp; &nbsp;&lt;span class=&quot;icon&quot;&gt;&lt;/span&gt;&lt;strong&gt;Success&lt;/strong&gt;
+    Lorem ipsum dolor sit amet.
+&lt;/div&gt;
+</pre>
+<p>
+	The message type is one of the following:</p>
+<ul>
+	<li>
+		success</li>
+	<li>
+		info</li>
+	<li>
+		error</li>
+	<li>
+		warning</li>
+	<li>
+		note</li>
+</ul>
+<p class="info">
+	Further examles and possible styles are shown in <a href="../Template/alert_boxes.html">alert_boxes.html</a>.</p>
+<h5>
+	Generation of Alert Boxes</h5>
+<p>
+	Alert boxes can easily be generated using jQuery:</p>
+<pre class="brush: js">
+$(&#39;parent selector&#39;).alertBox(message, options);
+</pre>
+<p>
+	<tt>options</tt> is an object with the following parameters:</p>
+<ul>
+	<li>
+		<tt>type</tt><br>
+		One of the message types listed above</li>
+	<li>
+		<tt>noMargin</tt><br>
+		true/false</li>
+	<li>
+		<tt>position</tt><br>
+		Top or bottom</li>
+</ul>
+<h4 id="sprites_block_lists">Block Lists</h4>
+<p>
+	<img alt="" src="assets/images/image_11.png" style="width: 174px; height: 146px;"></p>
+<p>
+	To get these block lists, simply add an <tt>.block-list</tt> class to the <tt>ul</tt>:</p>
+<pre class="brush: html">
+&lt;ul class=&quot;block-list&quot;&gt;
+    &lt;li&gt;[...]&lt;/li&gt;
+&lt;/ul&gt;
+
+</pre>
+<h6>
+	Block Lists with icons</h6>
+<p>
+	<img alt="" src="assets/images/image_4.png" style="width: 190px; height: 146px;"></p>
+<p>
+	To add icons to the list, add the <tt>.with-icons</tt>-class to the <tt>ul</tt>:</p>
+<pre class="brush: html">
+&lt;ul class=&quot;block-list with-icons&quot;&gt;
+    &lt;li class=&quot;i-16-iconname&quot;&gt;[...]&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+<p>
+	<tt>iconname</tt> is the name of the icon, just check <a href="../Template/css/icons.css"><tt>icons.css</tt></a> to see which icons are possible. Add your own, if you need.</p>
+<p class="info">
+	Well, check <a href="../Template/lists.html">lists.html</a> for examples.</p>
+<h6>
+	Requirements:</h6>
+<ul>
+	<li>
+		<em>CSS</em>:<br>
+		- sprites.lists.css</li>
+</ul>
+<h4 id="sprites_buttons">Buttons</h4>
+<p>
+	<img alt="" src="assets/images/image_27.png"></p>
+<p>
+	Peach comes with two kinds of buttons: The blues and reds. The markup is very simple:</p>
+<pre class="brush: html">
+&lt;button&gt;Default button&lt;/button&gt;
+&lt;button class=&quot;red&quot;&gt;Red button&lt;/button&gt;
+</pre>
+<p class="info">
+	In a form, the submit button is styled as a default button, the reset button as a red button.</p>
+<h4 id="sprites_boxes">Boxes</h4>
+<p>
+	<img alt="" src="assets/images/image_15.png"></p>
+<p>
+	Boxes are a basic sprite. Every content in the content area are encapsulated in boxes.</p>
+<pre class="brush: html">
+&lt;div class=&quot;grid_X&quot;&gt;
+&nbsp;&nbsp; &nbsp;&lt;div class=&quot;box&quot;&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &lt;div class=&quot;header&quot;&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;img src=&quot;img/icons/packs/fugue/16x16/ui-panel.png&quot; width=16 height=16&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;h3&gt;Title&lt;/h3&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &lt;/div&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &lt;div class=&quot;content&quot;&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;p&gt;Put your content here&lt;/p&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &lt;/div&gt;
+&nbsp;&nbsp; &nbsp;&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+<p>
+	Because Peach uses the 960 grid system, the width of the box is set by the wrapping <tt>div.grid_X</tt>, where X is the column span of totally 12 columns. If you use the fluid layout, <tt>.grid_X</tt> gives an percentual value for the width, so you can nest grid_12 elements. If you use the fixed layout, you have to take care about not getting the child elements of <tt>.container_12</tt> longer than 12 columns.</p>
+<h5>
+	Boxes without Icon</h5>
+<p>
+	<img alt="" src="assets/images/image_19.png"></p>
+<p>
+	To get an box with no icon, just drop the <tt>&lt;img&gt;</tt>.</p>
+<h5>
+	Closable Box</h5>
+<p>
+	<img alt="" src="assets/images/image_31.png" style="width: 274px; height: 79px;"></p>
+<p>
+	Simply add a <tt>&lt;span&gt;&lt;/span&gt;</tt> after the &lt;h3&gt;Title&lt;/h3&gt; in the <tt>.box .header</tt>.</p>
+<pre class="brush: html">
+&lt;div class=&quot;grid_X&quot;&gt;
+&nbsp;&nbsp; &nbsp;&lt;div class=&quot;box&quot;&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &lt;div class=&quot;header&quot;&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;img src=&quot;img/icons/packs/fugue/16x16/ui-panel.png&quot; width=16 height=16&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;h3&gt;Title&lt;/h3&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;span&gt;&lt;/span&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &lt;/div&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &lt;div class=&quot;content&quot;&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;p&gt;Put your content here&lt;/p&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &lt;/div&gt;
+&nbsp;&nbsp; &nbsp;&lt;/div&gt;
+&lt;/div&gt;</pre>
+<h5>
+	Boxes with Action Bar</h5>
+<p>
+	<img alt="" src="assets/images/image_3.png"></p>
+<p>
+	The action bar isdivided into left and right, just where you want to place your items. It is very usefull for <a href="../Template/forms.html">forms</a>.</p>
+<pre class="brush: html">
+&lt;div class=&quot;grid_X&quot;&gt;
+&nbsp;&nbsp; &nbsp;&lt;div class=&quot;box&quot;&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &lt;div class=&quot;header&quot;&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;img src=&quot;img/icons/packs/fugue/16x16/ui-panel.png&quot; width=16 height=16&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;h3&gt;Title&lt;/h3&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;span&gt;&lt;/span&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &lt;/div&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &lt;div class=&quot;content&quot;&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;p&gt;Put your content here&lt;/p&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &lt;/div&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &lt;div class=&quot;actions&quot;&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;div class=&quot;actions-left&quot;&gt;&lt;input type=&quot;reset&quot;&gt;&lt;/div&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;div class=&quot;actions-right&quot;&gt;&lt;input type=&quot;submit&quot;&gt;&lt;/div&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &lt;/div&gt;
+        &lt;div class=&quot;clear&quot;&gt;&lt;/div&gt;
+&nbsp;&nbsp; &nbsp;&lt;/div&gt;
+&lt;/div&gt;
+
+</pre>
+<h4 id="sprites_contact_list">Contact List</h4>
+<p>
+	&nbsp;</p>
+<div style="float: left; margin-right: 20px; margin-bottom: 10px;">
+	<img alt="" src="assets/images/image_9.png"></div>
+<p>
+	For information how to use the concact list, please visit <a href="http://devgrow.com/slidernav/">http://devgrow.com/slidernav/</a>.</p>
+<h5>
+	Requirements:</h5>
+<ul>
+	<li style="margin-left: 360px;">
+		<em>CSS</em>:<br>
+		- sprite.lists.css</li>
+</ul>
+<ul>
+	<li style="margin-left: 360px;">
+		<em>JS:</em><br>
+		- mylibs/slidernav.js</li>
+</ul>
+<p class="info">
+	If you want to see the contact list in action, just take a look at <a href="../Template/lists.html">lists.html</a>.</p>
+<div style="clear: both">
+	&nbsp;</div>
+<h4 id="sprites_footer_buttons">Footer Buttons</h4>
+<p>
+	<img alt="" src="assets/images/image_21.png"></p>
+<p>
+	If you want to use the footer buttons, just insert the following code into the footer:</p>
+<pre class="brush: html">
+&lt;div id=&quot;button_bar&quot;&gt;
+&nbsp;&nbsp; &nbsp;&lt;ul&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &lt;li&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;span&gt;&lt;a href=&quot;index.html&quot;&gt;Dashboard&lt;/a&gt;&lt;/span&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &lt;/li&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &lt;li&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;span&gt;&lt;a href=&quot;#&quot;&gt;Settings&lt;/a&gt;&lt;/span&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &lt;/li&gt;
+&nbsp;&nbsp; &nbsp;&lt;/ul&gt;
+&lt;/div&gt;</pre>
+<h5>
+	Requirements:</h5>
+<ul>
+	<li>
+		<em>CSS</em>:<br>
+		- footer.css</li>
+</ul>
+<h4 id="sprites_forms">Forms</h4>
+<h5>
+	Validation</h5>
+<p>
+	To add validation to a form, add the <tt>.validate</tt> class to the form:</p>
+<pre class="brush: html">
+&lt;form class=&quot;validate&quot; [...]&gt;
+    [...]
+&lt;/form&gt;
+</pre>
+<p>
+	You can set an input as required, add the <tt>required-class</tt> to it:</p>
+<pre class="brush: html">
+&lt;input name=&quot;username&quot; type=&quot;text&quot; placeholder=&quot; Your Name&quot; class=&quot;required&quot; /&gt;</pre>
+<p class="info">
+	Instead of listing every style possibility one after another, it&#39;s easier to simply inspect the live example on <a href="../Template/forms.html">forms.html</a>. Just use your favorite web inspector, and here we go.</p>
+<h5>
+	Requirements:</h5>
+<ul>
+	<li>
+		<em>CSS</em>:<br>
+		- sprite.forms.css</li>
+</ul>
+<ul>
+	<li>
+		<em>JS</em>:<br>
+		- mylibs/chosen.jquery.js<br>
+		- mylibs/jquery.placeholder.js<br>
+		- mylibs/jquery.miniColors.js</li>
+</ul>
+<h4 id="sprites_gallery">Gallery</h4>
+<p>
+	<img alt="" src="assets/images/image_22.png" style="width: 381px; height: 147px;"></p>
+<p>
+	To get this beautiful image gallery, use this simple markup:</p>
+<pre class="brush: html">
+&lt;ul class=&quot;gallery&quot;&gt;
+&nbsp;&nbsp; &nbsp;&lt;li&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &lt;a rel=&quot;prettyPhoto[galleryX]&quot; href=&quot;img/sprites/gallery/l/1.jpg&quot;&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;img src=&quot;img/sprites/gallery/1.jpg&quot;&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &lt;/a&gt;
+        {Actions List}
+&nbsp;&nbsp; &nbsp;&lt;/li&gt;
+    [...]
+&lt;/ul&gt;</pre>
+<p class="info">
+	Replace <tt>galleryX</tt> with an identifier for the gallery, if you want to use the PrettyPhoto plugin and you have multiple galleries per page.<br>
+	You can disable the PrettyPhoto plugin by removing the <tt>rel-tag</tt>.</p>
+<p class="warning">
+	Currently an image height of 135px is recommended. This may be fixed next update.</p>
+<h5>
+	Actions List</h5>
+<pre class="brush: html">
+&lt;ul class=&quot;action-list&quot;&gt;
+&nbsp;&nbsp; &nbsp;&lt;li&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; Actions
+&nbsp;&nbsp; &nbsp;&lt;/li&gt;
+&nbsp;&nbsp; &nbsp;&lt;li&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &lt;a href=&quot;#&quot;&gt;View&lt;/a&gt;
+&nbsp;&nbsp; &nbsp;&lt;/li&gt;
+&nbsp;&nbsp; &nbsp;&lt;li&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &lt;a href=&quot;#&quot;&gt;Edit&lt;/a&gt;
+&nbsp;&nbsp; &nbsp;&lt;/li&gt;
+&nbsp;&nbsp; &nbsp;&lt;li&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &lt;a href=&quot;#&quot;&gt;Remove&lt;/a&gt;
+&nbsp;&nbsp; &nbsp;&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+<h4 id="sprites_toolbar">Toolbar</h4>
+<p>
+	<img alt="" src="assets/images/image_6.png" style="width: 713px; height: 40px;"></p>
+<p>
+	The header toolbar contains the page title and some toolbar buttons.</p>
+<pre class="brush: html">
+&lt;div id=&quot;header-toolbar&quot;&gt;
+&nbsp;&nbsp; &nbsp;&lt;div class=&quot;container_12&quot;&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &lt;div class=&quot;grid8&quot;&gt;&lt;h1&gt;Peach - Smooth &amp; Clean Admin Template&lt;/h1&gt;&lt;/div&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &lt;div class=&quot;grid_4&quot;&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; {Toolbar buttons}
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &lt;/div&gt;
+&nbsp;&nbsp; &nbsp;&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+<p>
+	Toolbar buttons are the following:</p>
+<h5>
+	Large Toolbar Button</h5>
+<p>
+	<img alt="" src="assets/images/image_29.png" style="width: 118px; height: 86px;"> <img alt="" src="assets/images/image_16.png" style="width: 118px; height: 86px;"></p>
+<pre class="brush: html">
+&lt;!-- A large toolbar button --&gt;
+&lt;div class=&quot;toolbar_large&quot;&gt;
+&nbsp;&nbsp; &nbsp;&lt;div class=&quot;toolbutton&quot;&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &lt;div class=&quot;toolicon&quot;&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;img src=&quot;img/sprites/toolbar/user.png&quot; width=&quot;15&quot; height=&quot;15&quot; /&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &lt;/div&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &lt;div class=&quot;toolmenu&quot;&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;div class=&quot;toolcaption&quot;&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;span&gt;Administrator&lt;/span&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;/div&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;!-- Start of menu --&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;div class=&quot;dropdown&quot;&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;ul&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;li&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;a href=&quot;#&quot;&gt;Settings&lt;/a&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;/li&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;li&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;a href=&quot;#&quot;&gt;Logout&lt;/a&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;/li&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;/ul&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;/div&gt;&lt;!-- End of menu --&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &lt;/div&gt;
+&nbsp;&nbsp; &nbsp;&lt;/div&gt;
+&lt;/div&gt;&lt;!-- End of large toolbar button --&gt;
+</pre>
+<p class="info">
+	The <tt>.toolicon</tt> is optional.</p>
+<h5>
+	Small Toolbar Button</h5>
+<p>
+	<img alt="" src="assets/images/image_25.png" style="width: 41px; height: 31px;"></p>
+<p>
+	Beside the large toolbar button there is a small one.</p>
+<pre class="brush: html">
+&lt;div class=&quot;toolbar_small&quot;&gt;
+&nbsp;&nbsp; &nbsp;&lt;div class=&quot;toolbutton&quot;&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &lt;span&gt;3&lt;/span&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &lt;img src=&quot;img/sprites/toolbar/mail.png&quot; width=&quot;15&quot; height=&quot;11&quot; /&gt;
+&nbsp;&nbsp; &nbsp;&lt;/div&gt;
+&nbsp;&nbsp; &nbsp;{Toolbox}
+&lt;/div&gt;
+</pre>
+<p class="info">
+	The <tt>&lt;span&gt;&lt;/span&gt;</tt> is optional.</p>
+<p>
+	<img alt="" src="assets/images/image_30.png"></p>
+<p>
+	The small toolbutton contains a toolbox which can contain any content. In my example I made a mail overview of it (you can check it on the pages).</p>
+<pre class="brush: html">
+&lt;div class=&quot;toolbox&quot; &gt;
+&nbsp;&nbsp; &nbsp;&lt;span class=&quot;arrow&quot;&gt;&lt;/span&gt;
+&nbsp;&nbsp; &nbsp;&lt;h3&gt;Title&lt;/h3&gt;
+&nbsp;&nbsp; &nbsp;{Content}
+&lt;/div&gt;</pre>
+<p>
+	If you want to use the mail overview, just observe the code on the pages.</p>
+<h4 id="sprites_shortcuts">Shortcuts</h4>
+<p>
+	<img alt="" src="assets/images/image_17.png" style="width: 190px; height: 68px;"></p>
+<p>
+	An usage example for the shortcuts is shown in <a href="../Template/dashboard.html">dashboard.html</a>.</p>
+<pre class="brush: html">
+&lt;ul class=&quot;shortcuts&quot;&gt;
+&nbsp;&nbsp; &nbsp;&lt;li&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &lt;div class=&quot;shortcut-icon&quot;&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;img src=&quot;img/icons/25x25/blue/user.png&quot; width=&quot;25&quot; height=&quot;25&quot;&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;div class=&quot;divider&quot;&gt;&lt;/div&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &lt;/div&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &lt;a class=&quot;shortcut-description&quot; href=&quot;#&quot;&gt; &lt;strong&gt;Dashboard&lt;/strong&gt; &lt;span&gt;Your
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; description here.&lt;/span&gt; &lt;/a&gt;
+&nbsp;&nbsp; &nbsp;&lt;/li&gt;
+&nbsp;&nbsp; &nbsp;{Further shortcuts}
+&lt;/ul&gt;
+</pre>
+<p class="info">
+	Check <a href="../Template/lists.html">lists.html</a> for a demonstration.</p>
+<h4 id="sprites_sidebar">Sidebar</h4>
+<p>
+	The sidebar in Peach is optional. In the demonstration it is included only on the main page but feel free to use it everywhere or even not use it - as you like it.</p>
+<pre class="brush: html">
+&lt;div role=&quot;main&quot; class=&quot;container_12&quot; id=&quot;content-wrapper&quot;&gt;
+    &lt;aside&gt;
+        {User Info Box}
+        &lt;div id=&quot;sidebar_content&quot;&gt;
+            {Sidebar content}
+        &lt;/div&gt;
+    &lt;/aside&gt;
+    &lt;div id=&quot;main_content&quot;&gt;
+        {As you know it}
+    &lt;/div&gt;
+&lt;/div&gt;
+
+
+</pre>
+<p class="info">
+	The User Info Box is optionally. Read about them <a href="#/sprites_user_info">here</a>.</p>
+<p>
+	Besides usual text or simple elements the sidebar can contain a <a href="#sprites_sidebar_navigation">sidebar navigation</a> and an <a href="#sprites_user_info">user info box</a>.</p>
+<h5>
+	Requirements:</h5>
+<ul>
+	<li>
+		<em>CSS</em>:<br>
+		- sidebar.css</li>
+</ul>
+<h4 id="sprites_sidebar_navigation">Sidebar Navigation</h4>
+<p>
+	<img alt="" src="assets/images/image_28.png" style="width: 202px; height: 141px;"></p>
+<p>
+	The sidebar navigation is coded as following:</p>
+<pre class="brush: html">
+&lt;nav&gt;
+&nbsp;&nbsp; &nbsp;&lt;ul class=&quot;menu collapsible&quot;&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &lt;li class=&quot;first-child&quot;&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;a href=&quot;#&quot; class=&quot;current&quot;&gt;State: current&lt;/a&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &lt;/li&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &lt;li class=&quot;expand&quot;&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;a href=&quot;#&quot;&gt;State: normal&lt;/a&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;ul class=&quot;sub&quot;&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;li&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;a href=&quot;#&quot;&gt;State: normal&lt;/a&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;/li&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;li&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;a href=&quot;#&quot;&gt;State: normal&lt;/a&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;/li&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;li&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;a href=&quot;#&quot;&gt;State: normal&lt;/a&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;/li&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;/ul&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &lt;/li&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &lt;li&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;a href=&quot;#&quot;&gt;State: normal&lt;/a&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &lt;/li&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &lt;li class=&quot;last-child&quot;&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;a href=&quot;#&quot;&gt;State: normal&lt;/a&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &lt;/li&gt;
+&nbsp;&nbsp; &nbsp;&lt;/ul&gt;
+&lt;/nav&gt;
+</pre>
+<p class="info">
+	The current menu item is marked with<tt><span style="font-family: Arial,Verdana,sans-serif;"> </span>.current</tt> as you see it. If you want to expand an sub menu by default, add <tt>.expand</tt> to the corresponding <tt>li</tt>st item.</p>
+<p class="info">
+	<tt>.first-child</tt> and <tt>.last-child</tt> are for x-browser compatibility. If you have no need to support old browser, just drop this classes.</p>
+<h5>
+	Requirements:</h5>
+<ul>
+	<li>
+		<em>CSS</em>:<br>
+		- sidebar.css</li>
+</ul>
+<h4 id="sprites_stats_list">Stats List</h4>
+<p>
+	<img alt="" src="assets/images/image_5.png" style="width: 205px; height: 187px;"></p>
+<p>
+	The stats list is used to show the user some interesting stats eg. from Piwik. The creation of the list isn&#39;t more than this:</p>
+<pre class="brush: html">
+&lt;ul class=&quot;stats-list&quot;&gt;
+&nbsp;&nbsp; &nbsp;&lt;li&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &lt;a href=&quot;#&quot;&gt;Total Visits &lt;span&gt;12132&lt;/span&gt;&lt;/a&gt;
+&nbsp;&nbsp; &nbsp;&lt;/li&gt;
+&nbsp;&nbsp; &nbsp;&lt;li&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &lt;a href=&quot;#&quot;&gt;Today Visits &lt;span&gt;875&lt;/span&gt;&lt;/a&gt;
+&nbsp;&nbsp; &nbsp;&lt;/li&gt;
+&nbsp;&nbsp; &nbsp;&lt;li&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &lt;a href=&quot;#&quot;&gt;Comments &lt;span&gt;312&lt;/span&gt;&lt;/a&gt;
+&nbsp;&nbsp; &nbsp;&lt;/li&gt;
+&nbsp;&nbsp; &nbsp;&lt;li&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &lt;a href=&quot;#&quot;&gt;Support Tickets &lt;span&gt;12&lt;/span&gt;&lt;/a&gt;
+&nbsp;&nbsp; &nbsp;&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+<p class="info">
+	On <a href="../Template/lists.html">lists.html</a> you can find an example.</p>
+<h4 id="sprites_steps">Steps</h4>
+<p>
+	<img alt="" src="assets/images/image_8.png"></p>
+<p>
+	You can use the steps sprite to give an newly registred user an overview, what he can do next.</p>
+<pre class="brush: html">
+&lt;div class=&quot;grid_X&quot;&gt;
+&nbsp;&nbsp; &nbsp;&lt;div class=&quot;box&quot;&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &lt;div class=&quot;content no-padding&quot;&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;div class=&quot;step&quot;&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;span&gt;1&lt;/span&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;div class=&quot;circle&quot;&gt;&lt;/div&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;a href=&quot;#&quot;&gt; &lt;strong&gt;Check out the dashboard&lt;/strong&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;small&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; You&#39;ll find a sneak preview of
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;br&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; the theme&#39;s elements.
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;/small&gt; &lt;/a&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;/div&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;div class=&quot;step&quot;&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;span&gt;2&lt;/span&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;div class=&quot;circle&quot;&gt;&lt;/div&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;a href=&quot;#&quot;&gt; &lt;strong&gt;Check out the other pages&lt;/strong&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;small&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; There is a lot to discover.
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;br&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Honestly!
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;/small&gt; &lt;/a&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;/div&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;div class=&quot;step&quot;&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;span&gt;3&lt;/span&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;div class=&quot;circle&quot;&gt;&lt;/div&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;a href=&quot;#&quot;&gt; &lt;strong&gt;Fill your Profile&lt;/strong&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;small&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Don&#39;t forget to fill
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;br&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; your profile.
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;/small&gt; &lt;/a&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;/div&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+<p class="info">
+	Want to know, how it looks like? Go to <a href="../Template/lists.html">lists.html</a>.</p>
+<h6>
+	Requirements:</h6>
+<ul>
+	<li>
+		<em>CSS</em>:<br>
+		- sprite.lists.css</li>
+</ul>
+<h4 id="sprites_tables">Tables</h4>
+<h5>
+	Standalone tables</h5>
+<p>
+	<a name="sprites_tables_standalone_tables"></a>To get a beautifully styled table as shown in <a href="../Template/tables.html">tables.html</a>, add <tt>.table</tt> to the table:</p>
+<pre class="brush: html">
+&lt;table class=&quot;table&quot;&gt;
+    {Your table content}
+&lt;/table&gt;
+</pre>
+<h6>
+	Requirements:</h6>
+<ul>
+	<li>
+		<em>CSS</em>:<br>
+		- sprite.tables.css</li>
+</ul>
+<h5>
+	Data-tables</h5>
+<p>
+	The data tables are very easy to get: simply use the following line of Javascript:</p>
+<pre class="brush: js">
+$(&#39;#table-example&#39;).dataTable();</pre>
+<p>
+	Please also add the <tt>.table</tt>-class as mentioned <a href="#sprites_tables_standalone_tables">above</a>.</p>
+<p>
+	There is a lot of possibilities with data tables, just check <a href="http://datatables.net/">http://datatables.net/</a>.</p>
+<h6>
+	Requirements:</h6>
+<ul>
+	<li>
+		<em>CSS</em>:<br>
+		- sprite.tables.css</li>
+</ul>
+<ul>
+	<li>
+		<em>JS</em>:<br>
+		- mylibs/jquery.dataTables.js</li>
+</ul>
+<h4 id="sprites_tabs">Tabs</h4>
+<p>
+	<img alt="" src="assets/images/image_32.png"></p>
+<p>
+	Using tabs, one box can easily contain multiple contents. Just use the following structure:</p>
+<pre class="brush: html">
+&lt;div class=&quot;box&quot;&gt;
+&nbsp;&nbsp; &nbsp;&lt;div class=&quot;header&quot;&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &lt;img src=&quot;img/icons/packs/fugue/16x16/ui-tab.png&quot;&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &lt;h3&gt;Tabs&lt;/h3&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &lt;ul&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;li&gt;&lt;a href=&quot;#tab-1&quot;&gt;Lorem&lt;/a&gt;&lt;/li&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;li&gt;&lt;a href=&quot;#tab-2&quot;&gt;Dolor&lt;/a&gt;&lt;/li&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;li&gt;&lt;a href=&quot;#tab-3&quot;&gt;Consectetur&lt;/a&gt;&lt;/li&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &lt;/ul&gt;
+&nbsp;&nbsp; &nbsp;&lt;/div&gt;
+&nbsp;&nbsp; &nbsp;&lt;div class=&quot;content&quot;&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; {Tab content}
+&nbsp;&nbsp; &nbsp;&lt;/div&gt;
+&lt;/div&gt;</pre>
+<h5>
+	Tab content</h5>
+<pre class="brush: html">
+&lt;div class=&quot;tab-content&quot; id=&quot;tab-1&quot;&gt;
+&nbsp;&nbsp; &nbsp; First tab content}
+&lt;/div&gt;
+&lt;div class=&quot;tab-content&quot; id=&quot;tab-2&quot;&gt;
+&nbsp;&nbsp; &nbsp;{Second tab content}
+&lt;/div&gt;
+&lt;div class=&quot;tab-content&quot; id=&quot;tab-3&quot;&gt;
+&nbsp;&nbsp; &nbsp;{Third tab content}
+&lt;/div&gt;</pre>
+<p class="warning">
+	The <tt>href</tt> of the <tt>header &gt; ul &gt; li &gt; a</tt> has to point to a <tt>.tab-content</tt> element in the <tt>.content</tt> of the <tt>.box</tt></p>
+<p>
+	To initialize and set up the tabs, run the following line of Javascript:</p>
+<pre class="brush: js">
+$(&lt;select the box&gt;).createTabs();
+</pre>
+<p>
+	Et voila, the tabs are ready!</p>
+<p class="info">
+	You can set the tab to be opened by adding the hashtag <tt>#tab-<em>content-div-id</em></tt> to the url.</p>
+<h5>
+	Requirements:</h5>
+<ul>
+	<li>
+		<em>CSS</em>:<br>
+		- sprite.forms.css</li>
+</ul>
+<ul>
+	<li>
+		<em>JS</em>:<br>
+		- mylibs/chosen.jquery.js<br>
+		- mylibs/jquery.placeholder.js<br>
+		- mylibs/jquery.miniColors.js</li>
+</ul>
+<h4 id="sprites_user_info">User Info</h4>
+<p>
+	<img alt="" src="assets/images/image_13.png" style="width: 213px; height: 136px;"></p>
+<p>
+	The user info box is a sprite used in the sidebar. It is optionally.</p>
+<pre class="brush: html">
+&lt;div id=&quot;sidebar_top&quot;&gt;
+&nbsp;&nbsp; &nbsp;&lt;div class=&quot;userinfo&quot;&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &lt;div class=&quot;info&quot;&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;div class=&quot;avatar&quot;&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;img width=&quot;49&quot; height=&quot;69&quot; src=&quot;img/sprites/userinfo/avatar.png&quot;&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;/div&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;a href=&quot;#&quot;&gt;3 Messages&lt;/a&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &lt;/div&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &lt;ul class=&quot;links&quot;&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;li&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;strong&gt;&lt;a href=&quot;#&quot;&gt;Administrator&lt;/a&gt;&lt;/strong&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;/li&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;li&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;a href=&quot;#&quot;&gt;Settings&lt;/a&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;/li&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;li&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;a href=&quot;#&quot;&gt;Logout&lt;/a&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;/li&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &lt;/ul&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &lt;div class=&quot;clear&quot;&gt;&lt;/div&gt;
+&nbsp;&nbsp; &nbsp;&lt;/div&gt;
+&lt;/div&gt;</pre>
+<h5>
+	Requirements:</h5>
+<ul>
+	<li>
+		<em>CSS</em>:<br>
+		- sidebar.css</li>
+</ul>
+<h4 id="sprites_wizard">Wizard</h4>
+<p>
+	The wizard is structured as follows:</p>
+<pre class="brush: html">
+&lt;div data-step=&quot;1&quot; class=&quot;box wizard&quot;&gt;
+&nbsp;&nbsp;&nbsp; &lt;div class=&quot;header&quot;&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &lt;img width=&quot;16&quot; height=&quot;16&quot; src=&quot;img/icons/packs/fugue/16x16/application--arrow.png&quot;&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &lt;h3&gt;Wizard&lt;/h3&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &lt;span&gt;&lt;/span&gt;
+&nbsp;&nbsp; &nbsp;&lt;/div&gt;
+    &lt;div class=&quot;content&quot;&gt;
+    {Steps}
+    {Pages}
+    &lt;/div&gt;
+&nbsp;&nbsp;&nbsp; &lt;div class=&quot;actions&quot;&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &lt;div class=&quot;actions-left&quot;&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;button class=&quot;prev&quot;&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &laquo; Back
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;/button&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &lt;/div&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &lt;div class=&quot;actions-right&quot;&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;button class=&quot;next&quot;&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Forward &raquo;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;/button&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &lt;/div&gt;
+&nbsp;&nbsp; &nbsp;&lt;/div&gt;
+&nbsp;&nbsp; &nbsp;&lt;div class=&quot;clear&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+<h5>
+	Steps:<a name="sprites_wizard_steps"></a></h5>
+<pre class="brush: html">
+&lt;ul&gt;
+&nbsp;&nbsp; &nbsp;&lt;li class=&quot;current&quot;&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &lt;a href=&quot;#step_1&quot;&gt; &lt;span&gt;1&lt;/span&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &lt;div&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;strong&gt;Register&lt;/strong&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;small&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; It only takes a minute
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;/small&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &lt;/div&gt; &lt;/a&gt;
+&nbsp;&nbsp; &nbsp;&lt;/li&gt;
+    [...]
+&lt;/ul&gt;
+</pre>
+<h5>
+	Pages:</h5>
+<pre class="brush: html">
+&lt;div class=&quot;wiz_page step_1&quot;&gt;
+&nbsp;&nbsp; &nbsp;&lt;div class=&quot;wiz_sidebar grid_3&quot;&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &lt;span&gt;1&lt;/span&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &lt;div&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;strong&gt;Lorem&lt;/strong&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;small&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Ipsum
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;/small&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &lt;/div&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &lt;p&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed.
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &lt;/p&gt;
+&nbsp;&nbsp; &nbsp;&lt;/div&gt;
+&nbsp;&nbsp; &nbsp;&lt;div class=&quot;wiz_content&quot;&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &lt;h3&gt;Database setup&lt;/h3&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &lt;p&gt;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed.
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &lt;/p&gt;
+&nbsp;&nbsp; &nbsp;&lt;/div&gt;
+&lt;/div&gt;
+[...]
+</pre>
+<p class="info">
+	The <tt>.wiz_sidebar</tt> is optional.</p>
+<p class="info">
+	The class <tt>step_X</tt> corresponds to the <tt>step_X</tt> in the <a href="#sprites_wizard_steps">steps</a>.</p>
+<p class="info">
+	You can find an example wizard on <a href="../Template/wizard.html">wizard.html</a>.</p>
+<h6>
+	Requirements:</h6>
+<ul>
+	<li>
+		<em>CSS</em>:<br>
+		- sprite.wizard.css</li>
+</ul>
+<ul>
+	<li>
+		<em>JS</em>:<br>
+		- mylibs/jquery.equalheights.j</li>
+</ul>
+</section>
+<section id="plugins">
+	<h3>Plugins</h3><hr class="notop">
+<p>
+	Additional to the sprites, you&#39;ve got a bunch of usefull Javascript Plugins. Let&#39;s check them out:</p>
+<p class="warning">
+	In some cases, the plugin&#39;s javascript code is modified. If you need an updated plugin version, just write me a message.</p>
+<h4 id="plugins_tipsy">Tipsy</h4>
+<p>
+	<img alt="" src="assets/images/image_2.png"></p>
+<p>
+	To learn, how to use tipsy, just have a look at <a href="../Template/tooltips.html">tooltips.html</a>.</p>
+<p class="info">
+	Learn more at <a href="http://onehackoranother.com/projects/jquery/tipsy/">http://onehackoranother.com/projects/jquery/tipsy/</a></p>
+<h5>
+	Requirements:</h5>
+<ul>
+	<li>
+		<em>JS</em>:<br>
+		- mylibs/jquery.tipsy.js</li>
+</ul>
+<h4 id="plugins_fallr">Fallr</h4>
+<p>
+	<img alt="" src="assets/images/image_14.png" style="width: 374px; height: 175px;"></p>
+<p class="info">
+	Fallr is more than only a jGrowl remake: Check it&#39;s huge possibilities at <a href="http://amatyr4n.com/codecanyon/fallr/">http://amatyr4n.com/codecanyon/fallr/</a>. <a href="../Template/messages.html">messages.html</a> shows some usage possibilities.</p>
+<h5>
+	Requirements:</h5>
+<ul>
+	<li>
+		<em>JS</em>:<br>
+		- mylibs/jquery-fallr-1.2.js</li>
+</ul>
+<h4 id="plugins_jgrowl">jGrowl</h4>
+<p>
+	<img alt="" src="assets/images/image_10.png" style="width: 263px; height: 183px;"></p>
+<p class="info">
+	Concerning the usage of jGrowl, see <a href="../Template/notifications.html">notifications.html</a> and <a href="http://stanlemon.net/projects/jgrowl.html">http://stanlemon.net/projects/jgrowl.html</a>.</p>
+<h5>
+	Requirements:</h5>
+<ul>
+	<li>
+		<em>JS</em>:<br>
+		- mylibs/jquery.jGrowl.js</li>
+</ul>
+<h4 id="plugins_minicolors">MiniColors</h4>
+<p>
+	<img alt="" src="assets/images/image_18.png" style="width: 201px; height: 191px;"></p>
+<p>
+	MiniColors are used for color inputs. To use it, simply use:</p>
+<pre class="brush: html">
+&lt;input type=&quot;color&quot; name=&quot;...&quot; /&gt;
+</pre>
+<p class="info">
+	For an example of the color input, check <a href="../Template/forms.html">forms.html</a>. Check also <a href="http://abeautifulsite.net/blog/2011/02/jquery-minicolors-a-color-selector-for-input-controls/">http://abeautifulsite.net/blog/2011/02/jquery-minicolors-a-color-selector-for-input-controls/</a>.</p>
+<h5>
+	Requirements:</h5>
+<ul>
+	<li>
+		<em>JS</em>:<br>
+		- mylibs/jquery.miniColors.js</li>
+</ul>
+<h4 id="plugins_flot">Flot</h4>
+<p>
+	<img alt="" src="assets/images/image_24.png" style="width: 388px; height: 257px;"></p>
+<p>
+	Using flot, you can plot graphs and charts very easily.</p>
+<p class="info">
+	Check <a href="../Template/charts.html">charts.html </a>and <a href="http://code.google.com/p/flot/">http://code.google.com/p/flot/</a> for further information.</p>
+<p class="info">
+	You can set the chart&#39;s height by adding <tt>.small</tt>, <tt>.medium</tt> or <tt>.large</tt> to the surrounding div.</p>
+<h5>
+	Requirements:</h5>
+<ul>
+	<li>
+		<em>CSS</em>:<br>
+		- plugin.graph.css</li>
+</ul>
+<ul>
+	<li>
+		<em>JS</em>:<br>
+		- mylibs/flot/jquery.flot..js<br>
+		- mylibs/flot/jquery.flot.[...].js <em>(flot plugins, see plugin doc)</em></li>
+</ul>
+<h4 id="plugins_elfinder">elFinder</h4>
+<p>
+	<img alt="" src="assets/images/image_20.png"></p>
+<p>
+	elFinder is a great file explorer plugin. <span class="info">Just check <a href="../Template/explorer.html">explorer.html</a> to see it in action.</span> Please note, that this plugin needs a PHP or Python based backend. Have a look at <a href="http://elrte.org/elfinder">http://elrte.org/elfinder</a> for details and check the <a href="../Template/code/elfinder/">code/elfinder/</a>-directory.</p>
+<h5>
+	Requirements:</h5>
+<ul>
+	<li>
+		<em>CSS</em>:<br>
+		- plugin.fileexplorer.css</li>
+</ul>
+<ul>
+	<li>
+		<em>JS</em>:<br>
+		- mylibs/elfinder.full.js</li>
+</ul>
+<h4 id="plugins_fullcalendar">FullCalendar</h4>
+<p>
+	<img alt="" src="assets/images/image_23.png" style="width: 528px; height: 485px;"></p>
+<p>
+	You can use FullCalendar for a beautiful and simple calendar. Have a look at <a href="../Template/calendar.html">calendar.html</a> and also check <a href="http://arshaw.com/fullcalendar/">http://arshaw.com/fullcalendar/</a> for details.</p>
+<p class="info">
+	If you need Google Calendar integration, include <tt>js/mylibs/fullcalendar.gcal.js</tt></p>
+<h5>
+	Requirements:</h5>
+<ul>
+	<li>
+		<em>CSS</em>:<br>
+		- plugin.calendar.css</li>
+</ul>
+<ul>
+	<li>
+		<em>JS</em>:<br>
+		- mylibs/elfinder.full.js</li>
+</ul>
+<h4 id="plugins_jwysiwyg_rich_text_editor_">jWysiwyg (Rich Text Editor)</h4>
+<p>
+	<img alt="" src="assets/images/image_12.png" style="width: 433px; height: 238px;"></p>
+<p>
+	Using jWysiwyg you can easily provide an rich text edior.</p>
+<p class="info">
+	You can find a demonstration on <a href="../Template/editor.html">editor.html</a>. Please also check <a href="http://github.com/akzhan/jwysiwyg/">http://github.com/akzhan/jwysiwyg/</a>.</p>
+<h5>
+	Requirements:</h5>
+<ul>
+	<li>
+		<em>CSS</em>:<br>
+		- plugin.wysiwyg.css</li>
+</ul>
+<ul>
+	<li>
+		<em>JS</em>:<br>
+		- mylibs/jwysiwyg/jquery.wysiwyg.js<br>
+		- mylibs/jwysiwyg/controls/[...].js <em>(additional controls, see plugin doc)</em></li>
+</ul>
+</section>
+<section id="faq">
+	<h3>FAQ</h3><hr class="notop">
+<h4 id="faq_in_my_javascript_i_need_jquery_$_immediately">In my Javascript I need jQuery ($) immediately</h4>
+<p>
+	In this case, move the JS to the top and remove the <tt>defer</tt> tags attributes in the <tt>scripts</tt>.</p>
+<h4 id="faq_i_want_a_box_with_no_padding">I want a box with no padding</h4>
+<p>
+	No problem, just add the class no-padding to the box content:</p>
+<pre class="brush: html">
+&lt;div class=&quot;box no-padding&quot;&gt;;
+&nbsp;&nbsp;&nbsp; {Your Box}
+&lt;/div&gt;
+</pre>
+<h4 id="faq_i_want_the_grey_box_header_as_shown_in_the_documentation_screenshot">I want the grey box header as shown in the documentation screenshot</h4>
+<p>
+	Simply give the <tt>.header</tt> an <tt>.grey</tt> tag (as shown on the login page):</p>
+<pre class="brush: html">
+&lt;div class=&quot;header grey&quot;&gt;
+</pre>
+<h4 id="faq_i_want_the_date_time_picker_to_show_the_current_date_time">I want the date(time)picker to show the current date/time</h4>
+<p>
+	This can be done by adding <tt>data-date-relative=&quot;now&quot;</tt> to the input tag like this:</p>
+<pre class="brush: html">
+&lt;input type=&quot;datetime&quot; data-date-relative=&quot;now&quot;&gt;
+</pre>
+<p>
+	&nbsp;</p>
+</section>
+<section id="credits">
+	<h3>Credits</h3><hr class="notop">
+<h4 id="credits_credits">Credits</h4>
+<p>
+	<strong>Icons</strong></p>
+<ul>
+	<li>
+		<strong>Diagona Icon Set</strong></li>
+</ul>
+<p style="margin-left: 40px;">
+	Copyright &copy; 2011 Yusuke Kamiyamane. All rights reserved.<br>
+	<a href="http://p.yusukekamiyamane.com/">http://p.yusukekamiyamane.com</a></p>
+<ul>
+	<li>
+		<strong>Fugue Icon Set</strong></li>
+</ul>
+<p style="margin-left: 40px;">
+	Copyright &copy; 2011 Yusuke Kamiyamane. All rights reserved.<br>
+	<a href="http://p.yusukekamiyamane.com/">http://p.yusukekamiyamane.com</a></p>
+<ul>
+	<li>
+		<strong>iconSweets 2</strong></li>
+</ul>
+<p style="margin-left: 40px;">
+	Copyright &copy; 2011 by yummyGum. All rights reserved.<br>
+	<a href="http://iconsweets2.com/">http://iconsweets2.com/</a></p>
+<p>
+	<strong>JavaScripts</strong></p>
+<ul>
+	<li>
+		<strong>modernizr </strong>- <a href="http://modernizr.com/">http://modernizr.com</a></li>
+</ul>
+<ul>
+	<li>
+		<strong>Chosen</strong> - <a href="http://harvesthq.github.com/chosen/">http://harvesthq.github.com/chosen/</a></li>
+</ul>
+<ul>
+	<li>
+		<strong>elFinder</strong> - <a href="http://elrte.org/elfinder">http://elrte.org/elfinder</a></li>
+</ul>
+<ul>
+	<li>
+		<strong>FullCalendar</strong> - <a href="http://arshaw.com/fullcalendar/">http://jquery.com</a></li>
+</ul>
+<ul>
+	<li>
+		<strong>jQuery</strong> - <a href="http://jquery.com/">http://jquery.com</a></li>
+</ul>
+<ul>
+	<li>
+		<strong>jQuery UI</strong> - <a href="http://jqueryui.com/">http://jqueryui.com</a></li>
+</ul>
+<ul>
+	<li>
+		<strong>jQuery UI Touch-Punch</strong> - <a href="http://furf.com/exp/touch-punch/">http://furf.com/exp/touch-punch/</a></li>
+</ul>
+<ul>
+	<li>
+		<strong>jQuery Checkbox</strong> - <a href="http://widowmaker.kiev.ua/checkbox/">http://widowmaker.kiev.ua/checkbox/</a></li>
+</ul>
+<ul>
+	<li>
+		<strong>jQuery easing</strong> - <a href="http://gsgd.co.uk/sandbox/jquery/easing/">http://gsgd.co.uk/sandbox/jquery/easing/</a></li>
+</ul>
+<ul>
+	<li>
+		<strong>jQuery equalHeights</strong> - <a href="http://www.cssnewbie.com/equalheights-jquery-plugin/">http://www.cssnewbie.com/equalheights-jquery-plugin/</a></li>
+</ul>
+<ul>
+	<li>
+		<strong>jQuery File Input</strong> - <a href="http://filamentgroup.com/lab/jquery_custom_file_input_book_designing_with_progressive_enhancement/">http://filamentgroup.com/lab/jquery_custom_file_input_book_designing_with_progressive_enhancement/</a></li>
+</ul>
+<ul>
+	<li>
+		<strong>jQuery flot</strong> - <a href="http://code.google.com/p/flot/">http://code.google.com/p/flot/</a></li>
+</ul>
+<ul>
+	<li>
+		<strong>jQuery flot: orderBars</strong> - <a href="http://fr.benjaminbuffet.com/labs/flot/">http://fr.benjaminbuffet.com/labs/flot/</a></li>
+</ul>
+<ul>
+	<li>
+		<strong>jQuery Placeholder</strong> - <a href="http://mths.be/placeholder">http://mths.be/placeholder</a></li>
+</ul>
+<ul>
+	<li>
+		<strong>jQuery PrettyPhoto</strong> - <a href="http://www.no-margin-for-errors.com/projects/prettyphoto-jquery-lightbox-clone/">http://www.no-margin-for-errors.com/projects/prettyphoto-jquery-lightbox-clone/</a></li>
+</ul>
+<ul>
+	<li>
+		<strong>jQuery SliderNav</strong> - <a href="http://devgrow.com/slidernav/">http://devgrow.com/slidernav/</a></li>
+</ul>
+<ul>
+	<li>
+		<strong>jQuery Text-Overflow</strong> - <a href="http://devongovett.wordpress.com/2009/04/06/text-overflow-ellipsis-for-firefox-via-jquery/">http://devongovett.wordpress.com/2009/04/06/text-overflow-ellipsis-for-firefox-via-jquery/</a></li>
+</ul>
+<ul>
+	<li>
+		<strong>jQuery Timepicker</strong> - <a href="http://trentrichardson.com/examples/timepicker/">http://trentrichardson.com/examples/timepicker/</a></li>
+</ul>
+<ul>
+	<li>
+		<strong>jQuery Tipsy</strong> - <a href="http://onehackoranother.com/projects/jquery/tipsy/">http://onehackoranother.com/projects/jquery/tipsy/</a></li>
+</ul>
+<ul>
+	<li>
+		<strong>jQuery MiniColors</strong> - <a href="http://abeautifulsite.net/blog/2011/02/jquery-minicolors-a-color-selector-for-input-controls/">http://abeautifulsite.net/blog/2011/02/jquery-minicolors-a-color-selector-for-input-controls/</a></li>
+</ul>
+<ul>
+	<li>
+		<strong>jQuery resize</strong> - <a href="http://benalman.com/projects/jquery-resize-plugin/">http://benalman.com/projects/jquery-resize-plugin/</a></li>
+</ul>
+<ul>
+	<li>
+		<strong>jQuery validate</strong> - <a href="http://bassistance.de/">http://bassistance.de</a></li>
+</ul>
+<ul>
+	<li>
+		<strong>jQuery jWysiwyg</strong> - <a href="http://github.com/akzhan/jwysiwyg/">http://bassistance.de</a></li>
+</ul>
+<ul>
+	<li>
+		<strong>jGrowl</strong> - <a href="http://stanlemon.net/">http://stanlemon.net</a></li>
+</ul>
+</section>
+<section id="changelog">
+	<h3>Changelog</h3><hr class="notop">
+<p>
+	<strong>v1.1</strong><em> (03.12.2011)</em></p>
+<p style="margin-left: 40px;">
+	<b>Features:</b></p>
+<ul>
+	<li>
+		Activity stream item&#39;s width can be set from CSS (see <a href="#sprites_activity_stream">Activity Stream</a>)</li>
+</ul>
+<ul>
+	<li>
+		Set opened tab via hash: <a href="../Template/charts.html#tab-area">charts.html#tab-area</a></li>
+</ul>
+<ul>
+	<li>
+		jQuery DatePicker + TimePicker + DateTimePicker (see <a href="../Template/forms.html">Forms</a>)</li>
+</ul>
+<ul>
+	<li>
+		Styling of file inputs (see <a href="../Template/forms.html">Forms</a>)</li>
+</ul>
+<p style="margin-left: 40px;">
+	&nbsp;</p>
+<p style="margin-left: 40px;">
+	<b>Bugs fixed:</b></p>
+<ul>
+	<li>
+		Footer links not clickable, when scrollbars are shown</li>
+</ul>
+<ul>
+	<li>
+		When having a page with the sidebar and long content, the sidebar isn&#39;t on full height</li>
+</ul>
+<ul>
+	<li>
+		IE9 problems with gradients and border-radius</li>
+</ul>
+<ul>
+	<li>
+		Minor JS problems in form validation</li>
+</ul>
+<ul>
+	<li>
+		Flickering of elements when JS is not fully loaded (DOM flickering)</li>
+</ul>
+<ul>
+	<li>
+		Small bug with borders on datatables</li>
+</ul>
+<p style="margin-left: 40px;">
+	&nbsp;</p>
+<p style="margin-left: 40px;">
+	<b>Improvements:</b></p>
+<ul>
+	<li>
+		Styling of wizard sidebar doesn&#39;t style additional (custom) span, small, strong any more</li>
+</ul>
+<p style="margin-left: 40px;">
+	&nbsp;</p>
+<p style="margin-left: 40px;">
+	<b>Updates:</b></p>
+<ul>
+	<li>
+		jQuery updated (1.6.4 &raquo; 1.7.1)</li>
+</ul>
+<p>
+	<strong>v1.0</strong><em> (11.11.2011)</em></p>
+<ul>
+	<li>
+		Initial release</li>
+</ul>
+</section>
+<section id="final_words">
+	<h3>Final Words</h3><hr class="notop">
+<p>
+	Once again, thank you so much for purchasing this theme. As I said at the beginning, I&#39;d be glad to help you if you have any questions relating to this theme. No guarantees, but I&#39;ll do my best to assist. If you have a more general question relating to the themes on ThemeForest, you might consider visiting the forums and asking your question in the &quot;Item Discussion&quot; section.</p>
+<p>
+	And remember: I made this theme with love, so I hope you can enjoy it. <img alt="heart" height="20" src="assets/images/image_34.gif" title="heart" width="20"></p>
+<p>
+	<strong>Simon Stamm (Stammi)</strong></p>
+</section>
+
+	</div>
+</body>
+</html>

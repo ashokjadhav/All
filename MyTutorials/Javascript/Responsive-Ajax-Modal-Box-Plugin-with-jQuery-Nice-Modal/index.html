@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>jQuery Nice Modal Example</title>
+<link rel="stylesheet" href="lib/jquery-nicemodal-1.0/jquery-nicemodal.css">
+<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+</head>
+
+<body>
+<div class="jquery-script-ads">
+</div>
+<h1>jQuery Nice Modal Example</h1>
+<button data-url="demo-modal.html" id="demo">Click me</button>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="lib/jquery-nicemodal-1.0/jquery-nicemodal.js"></script>
+<script>
+$(function(){
+
+    $('button#demo').nicemodal({
+        width: '500px',
+        keyCodeToClose: 27,
+        defaultCloseButton: true,
+        closeOnClickOverlay: true,
+        closeOnDblClickOverlay: false,
+        // onOpenModal: function(){
+        //     alert('Opened');
+        // },
+        // onCloseModal: function(){
+        //     alert('Closed');
+        // }
+    });
+});
+</script>
+
+</body>
+</html>

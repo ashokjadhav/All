@@ -1,0 +1,208 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>BotDetect PHP Captcha CodeIgniter Integration Examples</title>
+    <style type="text/css">
+        * {margin: 0; padding: 0;}
+        body {
+          background-color: #e8e9f0;
+          font-family: Verdana;
+          font-size: 14px;
+          line-height: 18px;
+          margin: 20px auto;
+          padding: 10px 10px 40px 20px;
+          width: 700px;
+          color: #202020;
+        }
+
+        h1 {
+          font-family: Tahoma;
+          font-size: 21px;
+          line-height: 24px;
+          font-weight: normal;
+          margin: 15px 0 18px 0;
+          padding: 0; 
+        }
+
+        h2 {
+          font-size: 15px; 
+          font-family: Verdana;
+          font-size: 16px;
+          margin: 42px 0 9px 0;
+          padding: 0;
+          color: #202020;
+        }
+
+        h3 {
+          margin: 9px 0 6px 0;
+          padding: 0;
+          font-family: Tahoma;
+          font-size: 14px;
+          font-variant: small-caps;
+        }
+
+        fieldset {
+          background-color: #EEEEFF;
+          padding: 3px 12px 10px 12px;
+          margin: 11px 11px 21px 11px;
+          border: 1px solid #ccd;
+          border-bottom: 1px solid #bbc;
+          border-right: 1px solid #bbc;
+          width: 640px !important;
+          display: block;
+        }
+
+        legend {
+          padding: 2px 7px;
+          margin: 0;
+          color: #999999;
+          font-size: 13px;
+        }
+
+        ul {
+          margin: 0 0 0 30px;
+          padding: 0 0 5px 0;
+        }
+
+        ul li {
+          margin: 3px 0; 
+        }
+
+        li p {
+          margin: 0;
+          padding: 0;
+        }
+
+        ul li ul {
+          margin: 0 0 15px 0;
+          padding: 0 0 0 30px;
+        }
+
+        code {
+          font-size: 15px;
+        }
+
+        .note {
+          margin: 10px 10px 20px 10px;
+          width: 310px;
+        }
+
+        .note p {
+          font-size: 12px;
+        }
+
+        #notes {
+          position: absolute;
+          top: 15px;
+          left: 455px;
+        }
+
+        p.toplink {
+          margin: -9px 25px 9px 0;
+          padding: 0;
+          font-size: 12px;
+          text-align: right;
+          clear: both !important;
+        }
+
+        a:link {
+          /*font-family: Arial;
+          font-size: 14px;*/
+          /*font-weight: bolder;*/
+          color: #2763cc;
+          text-decoration: none;
+        }
+
+        a:visited {
+          color: #5070b0;
+          text-decoration: none;
+        }
+
+        a:hover {
+          color: #2862cc;
+          text-decoration: underline;
+        }
+
+        .notes {
+          background: #fdf2d7;
+          border: 1px solid #fbda82;
+          padding: 3px 12px 10px 12px;
+          margin: 11px 11px 21px 11px;
+          width: 640px !important;
+        }
+    </style>
+</head>
+<body>
+    <h1>BotDetect PHP Captcha CodeIgniter Integration Examples</h1>
+
+    <div class="notes">
+        <h3>First Time Here?</h3>
+        <p>Check the <a target="_blank" rel="nofollow" href="http://captcha.com/doc/php/codeigniter-captcha-quickstart.html" title="BotDetect CodeIgniter 3.0 CAPTCHA Integration Quickstart">CodeIgniter 3.0 Captcha Quickstart</a> or <a target="_blank" rel="nofollow" href="http://captcha.com/doc/php/codeigniter-2.2-captcha-quickstart.html" title="BotDetect CodeIgniter 2.2 CAPTCHA Integration Quickstart">CodeIgniter 2.2 Captcha Quickstart</a> for key integration steps.</p>
+    </div>
+
+    <h2>Form Validation</h2>
+    <fieldset>
+        <h3>CodeIgniter 3.0</h3>
+        <ul>
+            <li><a target="_blank" href="./codeigniter-3.0/codeigniter_form_validation_captcha_example/index.php/example">Basic CAPTCHA Example</a></li>
+            <li><a target="_blank" href="./codeigniter-3.0/codeigniter_form_validation_captcha_example/index.php/contact">Form Validation CAPTCHA Example</a></li>
+        </ul>
+
+        <h3>CodeIgniter 2.2</h3>
+        <ul>
+            <li><a target="_blank" href="./codeigniter-2.2/codeigniter_form_validation_captcha_example/index.php/example">Basic CAPTCHA Example</a></li>
+            <li><a target="_blank" href="./codeigniter-2.2/codeigniter_form_validation_captcha_example/index.php/contact">Form Validation CAPTCHA Example</a></li>
+        </ul>
+    </fieldset>
+
+    <h2>Authentication</h2>
+    <fieldset>
+        <h3>CodeIgniter 3.0</h3>
+        <ul>
+            <li>Bit Auth
+                <ul>
+                    <li><a target="_blank" href="./codeigniter-3.0/codeigniter_bit_auth_captcha_example/index.php/example/login">Login Form Validation CAPTCHA Example</a></li>
+                    <li><a target="_blank" href="./codeigniter-3.0/codeigniter_bit_auth_captcha_example/index.php/example/register">Register Form Validation CAPTCHA Example</a></li>
+                </ul>
+            </li>
+            <li>Ion Auth
+                <ul>
+                    <li><a target="_blank" href="./codeigniter-3.0/codeigniter_ion_auth_captcha_example/index.php/auth/login">Login Form Validation CAPTCHA Example</a></li>
+                    <li><a target="_blank" href="./codeigniter-3.0/codeigniter_ion_auth_captcha_example/index.php/auth/forgot_password">Forgot Password Form Validation CAPTCHA Example</a></li>
+                </ul>
+            </li>
+            <li>Tank Auth
+                <ul>
+                    <li><a target="_blank" href="./codeigniter-3.0/codeigniter_tank_auth_captcha_example/index.php/auth/login">Login Form Validation CAPTCHA Example</a></li>
+                    <li><a target="_blank" href="./codeigniter-3.0/codeigniter_tank_auth_captcha_example/index.php/auth/register">Register Form Validation CAPTCHA Example</a></li>
+                    <li><a target="_blank" href="./codeigniter-3.0/codeigniter_tank_auth_captcha_example/index.php/auth/forgot_password">Forgot Password Form Validation CAPTCHA Example</a></li>
+                </ul>
+            </li>
+        </ul>
+
+        <h3>CodeIgniter 2.2</h3>
+        <ul>
+            <li>Bit Auth
+                <ul>
+                    <li><a target="_blank" href="./codeigniter-2.2/codeigniter_bit_auth_captcha_example/index.php/example/login">Login Form Validation CAPTCHA Example</a></li>
+                    <li><a target="_blank" href="./codeigniter-2.2/codeigniter_bit_auth_captcha_example/index.php/example/register">Register Form Validation CAPTCHA Example</a></li>
+                </ul>
+            </li>
+            <li>Ion Auth
+                <ul>
+                    <li><a target="_blank" href="./codeigniter-2.2/codeigniter_ion_auth_captcha_example/index.php/auth/login">Login Form Validation CAPTCHA Example</a></li>
+                    <li><a target="_blank" href="./codeigniter-2.2/codeigniter_ion_auth_captcha_example/index.php/auth/forgot_password">Forgot Password Form Validation CAPTCHA Example</a></li>
+                </ul>
+            </li>
+            <li>Tank Auth
+                <ul>
+                    <li><a target="_blank" href="./codeigniter-2.2/codeigniter_tank_auth_captcha_example/index.php/auth/login">Login Form Validation CAPTCHA Example</a></li>
+                    <li><a target="_blank" href="./codeigniter-2.2/codeigniter_tank_auth_captcha_example/index.php/auth/register">Register Form Validation CAPTCHA Example</a></li>
+                    <li><a target="_blank" href="./codeigniter-2.2/codeigniter_tank_auth_captcha_example/index.php/auth/forgot_password">Forgot Password Form Validation CAPTCHA Example</a></li>
+                </ul>
+            </li>
+        </ul>
+    </fieldset>
+	
+</body>
+</html>
