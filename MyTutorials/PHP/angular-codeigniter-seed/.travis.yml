@@ -1,0 +1,39 @@
+language: php
+
+php: '5.5'
+
+before_script:
+    - sudo apt-get update
+    - sudo apt-get install apache2 libapache2-mod-fastcgi
+    - sudo cp ~/.phpenv/versions/$(phpenv version-name)/etc/php-fpm.conf.default ~/.phpenv/versions/$(phpenv version-name)/etc/php-fpm.conf
+    - sudo a2enmod rewrite actions fastcgi alias
+    - echo "cgi.fix_pathinfo = 1" >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini
+    - ~/.phpenv/versions/$(phpenv version-name)/sbin/php-fpm
+    - sudo cp -f build/travis-ci-apache /etc/apache2/sites-available/default
+    - sudo sed -e "s?%TRAVIS_BUILD_DIR%?$(pwd)?g" --in-place /etc/apache2/sites-available/default
+    - sudo service apache2 restart
+    - mysql -e 'create database acs;'
+    - php api/index.php cli install
+    - php api/index.php cli add administrator foo@bar.com password123
+    - composer install
+    - patch -p0 < build/sauce.patch
+
+script:
+    - vendor/bin/phpunit --configuration `pwd`/tests/phpunit.xml --coverage-clover ../build/logs/clover.xml
+    - vendor/bin/paratest -p 8 -f --phpunit=vendor/bin/phpunit tests/SeleniumTest.php
+
+after_script:
+    - wget https://scrutinizer-ci.com/ocular.phar
+    - php ocular.phar code-coverage:upload --format=php-clover build/logs/clover.xml
+
+env:
+    global:
+        - secure: my2TT2Gq1b58eKJtiF9pg1WTr2Qj7V1TtB95JaJ0NPOmWaeC1yNEeGRDkxm+Exjq6OTaEtZjmbAmMVq9/37abCjS4uYYPplRb1yDKBSMV0LdEVeJCHGI7mwX8LPVbH7CbolPmE9zUwXud5/4+ZCgvAQ0TGe2/CIG7egJ/uZm4XM=
+        - secure: TckfdYl2c+D47wg6sMIe3JCvN6pSd0W0e3xGV2KQxn9zJUAYr2Ee+s8VjBGJ5QolcsjRGkhm36EPOMzmo+m6I707b189+rzBx0+UpnD9FUozvK1tCtu/ZqQ9lXfMFXX6pBXxpSxJp5BQ92meZbRpPuUKz4GiPEqUdEtLduaeM5s=
+        - SAUCE_TUNNEL_IDENTIFIER=$TRAVIS_JOB_NUMBER
+        - SAUCE_DONT_VERIFY_CERTS=1
+        - TRAVIS_JOB_ID=$TRAVIS_JOB_NUMBER
+addons:
+    sauce_connect: true
+    code_climate:
+        repo_token: 33757f44ff7a8f1bdb175e3325a302d5e748dfee9b1e946cbcd266f0156f006f
